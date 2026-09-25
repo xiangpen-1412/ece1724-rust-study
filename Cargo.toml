@@ -62,3 +62,15 @@ path = "src/lectures/lec3/functions.rs"
 [[bin]]
 name = "lec3_if_expressions"
 path = "src/lectures/lec3/if_expressions.rs"
+
+[[bin]]
+name = "lec3_loop_expressions"
+path = "src/lectures/lec3/loop_expressions.rs"
+
+[[bin]]
+name = "lec3_while_loops"
+path = "src/lectures/lec3/while_loops.rs"
+
+[[bin]]
+name = "lec3_for_loops"
+path = "src/lectures/lec3/for_loops.rs"

@@ -1,7 +1,5 @@
-// Lecture 3: char, &str, byte literals, and UTF-8 length.
-// Run target: lec3_characters
-// Distinguish bytes, Unicode scalar values, and visually perceived characters.
-// Unicode test data appears in code; all explanations are in English.
+// Characters and UTF-8.
+// Run: lec3_characters
 
 fn main() {
     let letter: char = 'R';
@@ -12,15 +10,13 @@ fn main() {
     println!("字节的数值：{byte}");
     println!("字符串字节数：{}", text.len());
 
-    // Single quotes form a char literal; double quotes form a string literal.
-    // A char holds exactly one Unicode scalar value, including non-ASCII values.
+    // char holds one Unicode scalar value.
     let chinese: char = '中';
     let emoji: char = '😀';
     println!("Valid char values: {chinese}, {emoji}");
-    // let invalid: char = 'ab'; // Error: a char literal contains multiple characters.
-    // let wrong_type: char = "R"; // Error: a string literal is not a char.
+    // let invalid: char = 'ab'; // Error: multiple characters.
+    // let wrong_type: char = "R"; // Error: &str, not char.
 
-    // Your original string and iterator declarations are preserved and used.
     let text = "中";
     let chars = text.chars();
     let scalar_count = chars.count();
@@ -28,19 +24,16 @@ fn main() {
         "Your text: {} bytes, {scalar_count} scalar value",
         text.len()
     );
-    // Expected: 3 bytes and 1 scalar value.
-    // count consumes the iterator; create a new iterator to count again.
-    // let second_count = chars.count(); // Error: chars was moved by count().
+    // count consumes the iterator.
+    // let second_count = chars.count(); // Error: moved iterator.
     println!("Count with a fresh iterator: {}", text.chars().count());
 
-    // str::len counts UTF-8 bytes. chars().count counts Unicode scalar values.
-    // Expected byte/scalar counts: ASCII 1/1, Chinese 3/1, emoji 4/1.
+    // len: bytes; chars().count(): scalar values.
     show_lengths("ASCII", "A");
     show_lengths("Chinese", "中");
     show_lengths("Emoji", "😀");
 
-    // A stored Rust char always occupies 4 bytes, independent of UTF-8 length.
-    // len_utf8 reports the bytes needed to encode a particular char in UTF-8.
+    // char storage: 4 bytes; UTF-8 encoding: 1-4 bytes.
     println!(
         "Storage occupied by char: {} bytes",
         std::mem::size_of::<char>()
@@ -50,28 +43,23 @@ fn main() {
         letter.len_utf8(),
         chinese.len_utf8(),
         emoji.len_utf8()
-    ); // Expected: 1, 3, 4.
+    ); // 1, 3, 4.
 
-    // A byte literal has type u8. Here the ASCII code of R is 82.
     println!("ASCII byte value: {byte}");
-    // let invalid_byte = b'\u{4e2d}'; // Error: byte literals cannot use Unicode escapes.
+    // let invalid_byte = b'\u{4e2d}'; // Error: Unicode byte escape.
     println!("UTF-8 bytes of your text: {:?}", text.as_bytes());
-    // Expected: [228, 184, 173]. Those three bytes encode one scalar value.
 
-    // These strings can look alike but contain different scalar sequences.
-    // Rust does not normalize Unicode automatically when comparing strings.
+    // String comparison does not normalize Unicode.
     let precomposed = "é";
     let combining = "e\u{301}";
-    show_lengths("Precomposed accent", precomposed); // Expected: 2 bytes, 1 scalar.
-    show_lengths("Combining accent", combining); // Expected: 3 bytes, 2 scalars.
-    println!("Equal strings: {}", precomposed == combining); // Expected: false.
+    show_lengths("Precomposed accent", precomposed); // 2 bytes, 1 scalar.
+    show_lengths("Combining accent", combining); // 3 bytes, 2 scalars.
+    println!("Equal strings: {}", precomposed == combining); // false.
 
-    // A visible character may contain multiple scalar values, so chars().count()
-    // is not a general way to count user-perceived characters (grapheme clusters).
-    // Strings also cannot be indexed with an integer to obtain a char.
-    // let first = text[0]; // Error: str cannot be indexed by an integer.
+    // Scalar counts can differ from visible-character counts.
+    // let first = text[0]; // Error: integer string index.
     println!("First scalar value: {:?}", text.chars().next());
-    // next returns Some(char) here, or None if the string is empty.
+    // next: Some(char), or None when empty.
 }
 
 fn show_lengths(label: &str, text: &str) {
