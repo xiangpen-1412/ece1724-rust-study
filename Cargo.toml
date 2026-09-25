@@ -6,3 +6,19 @@ rust-version = "1.98.1"
 publish = false
 
 [dependencies]
+
+[[bin]]
+name = "lec3_variables"
+path = "src/lectures/lec3/variables_and_mutability.rs"
+
+[[bin]]
+name = "lec3_constants_static"
+path = "src/lectures/lec3/constants_and_static.rs"
+
+[[bin]]
+name = "lec3_scope_shadowing"
+path = "src/lectures/lec3/scope_and_shadowing.rs"
+
+[[bin]]
+name = "lec3_input_parsing"
+path = "src/lectures/lec3/input_parsing.rs"
