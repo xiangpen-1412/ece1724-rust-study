@@ -1,37 +1,61 @@
 // Lecture 3, slide 23 and extensions: integer ranges, bit widths, and overflow.
 // Run target: lec3_integer_types
-// Goal: distinguish compile errors, runtime overflow, and explicit overflow handling.
+// The default run is safe and needs no input. The optional argument tests overflow.
 
 fn main() {
-    // Basics: signed and unsigned integers.
+    // Signed integers represent negative values; unsigned integers do not.
     let signed: i8 = -3;
     let unsigned: u8 = 42;
     println!("signed = {signed}, unsigned = {unsigned}");
     println!("i8 range: {}..={}", i8::MIN, i8::MAX);
     println!("u8 range: {}..={}", u8::MIN, u8::MAX);
     println!("usize bits for this build target: {}", usize::BITS);
+    // usize/isize depend on the compilation target, not the current value.
 
-    // Exercise A: does a literal fit within the specified type?
-    // TODO: declare u8 variables with 255 and 256, and i8 variables with -128 and 128.
-    // Try one case at a time. Record compile errors, then comment out the failing code.
-    // My prediction:
-    // My code:
-    // Actual result:
-    // Explanation:
+    // Boundary literals: u8 spans 0..=255; i8 spans -128..=127.
+    let num: u8 = 255;
+    let minimum: i8 = -128;
+    println!("valid boundaries: num = {num}, minimum = {minimum}");
+    // let too_large: u8 = 256;
+    // let signed_too_large: i8 = 128;
+    // let negative_unsigned: u8 = -1;
+    // These are rejected: the requested values cannot be represented by the type.
 
-    // Exercise B: addition overflow at runtime.
-    // TODO: follow input_parsing.rs to read a u8 at runtime, then add 1 to it.
-    // Try inputs 254 and 255, comparing development and release builds.
-    // Record the build profile. Use runtime input rather than a statically known overflow.
-    // My code:
+    // Different literal notations can represent exactly the same integer.
+    let decimal = 255_u16;
+    let hexadecimal = 0xff_u16;
+    let binary = 0b1111_1111_u16;
+    println!("equivalent literals: {decimal}, {hexadecimal}, {binary}");
 
-    // Exercise C: implement four explicit ways to handle overflow.
-    // TODO: call checked_add, wrapping_add, saturating_add, and overflowing_add
-    // on the same u8 value. Predict and print the results, then explain each use case.
-    // My code:
+    // Explicit methods make overflow behavior independent of the build profile.
+    let checked = num.checked_add(1);
+    let wrapped = num.wrapping_add(1);
+    let saturated = num.saturating_add(1);
+    let overflowed = num.overflowing_add(1);
+    println!("{num}.checked_add(1) = {checked:?}"); // None: report failure.
+    println!("{num}.wrapping_add(1) = {wrapped}"); // 0: wrap modulo 256.
+    println!("{num}.saturating_add(1) = {saturated}"); // 255: clamp at the maximum.
+    println!("{num}.overflowing_add(1) = {overflowed:?}"); // (0, true): value + flag.
+    println!("254.checked_add(1) = {:?}", 254_u8.checked_add(1)); // Some(255).
+    // Some(value) and None are the success/failure forms of Option.
+    // The {:?} formatter displays these values and the tuple for inspection.
 
-    // Tricky cases: integer division by zero, and a signed minimum divided by -1.
-    // TODO: predict whether disabling ordinary addition overflow checks makes these
-    // cases behave the same way as overflowing addition. Verify with runtime inputs.
-    // My code:
+    // Integer division has additional failure cases, even with overflow checks off.
+    println!("1 / 0, checked = {:?}", 1_u8.checked_div(0)); // None.
+    println!("i8::MIN / -1, checked = {:?}", i8::MIN.checked_div(-1)); // None.
+    // At runtime, ordinary integer division by zero panics in both profiles.
+    // i8::MIN / -1 would produce 128, which does not fit in i8; it also panics.
+
+    // Optional runtime experiment, using input unavailable at compilation time:
+    // cargo run --bin lec3_integer_types -- 254
+    // cargo run --bin lec3_integer_types -- 255
+    // cargo run --release --bin lec3_integer_types -- 255
+    // With default profiles: 254 gives 255 in both; 255 panics in dev, wraps in release.
+    // The overflow-checks setting can change this; the profile name alone is not a rule.
+    if let Some(argument) = std::env::args().nth(1) {
+        let runtime_value: u8 = argument.parse().expect("Provide an integer from 0 to 255");
+        println!("Runtime experiment: adding 1 to {runtime_value}");
+        let next = runtime_value + 1;
+        println!("Result: {next}");
+    }
 }

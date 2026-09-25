@@ -1,34 +1,32 @@
-# Lecture 3：数据类型练习
+# Lecture 3：数据类型参考
 
-对应本轮讲解：静态类型与类型推断、整数、浮点数、数值运算、转换、布尔和字符。
+核心示例和典型易错点已经补全，可直接运行、查看输出和英文注释。故意无法编译的写法保留为注释，并说明原因。
 
-## 文件与运行目标
-
-| 文件（位于 src/lectures/lec3/） | 运行目标 | 留给自己写的扩展 |
+| 文件（位于 src/lectures/lec3/） | 运行目标 | 已完成的内容 |
 | --- | --- | --- |
-| `type_inference.rs` | `lec3_type_inference` | 后续语句约束、明确类型后的赋值、mut 与 shadowing |
-| `integer_types.rs` | `lec3_integer_types` | 范围边界、运行时溢出、不同溢出处理方法 |
-| `numeric_operations.rs` | `lec3_numeric_operations` | 负数除法与余数、浮点误差、混合类型 |
-| `type_conversions.rs` | `lec3_type_conversions` | 窄化、转换顺序、有损转换 |
-| `booleans.rs` | `lec3_booleans` | 条件类型、短路与非短路 |
-| `characters.rs` | `lec3_characters` | 字符、字节、UTF-8 长度与组合字符 |
+| `type_inference.rs` | `lec3_type_inference` | 默认类型、后续使用约束类型、明确类型与转换、mut 与 shadowing |
+| `integer_types.rs` | `lec3_integer_types` | 范围边界、四种溢出方法、可选的运行时溢出实验 |
+| `numeric_operations.rs` | `lec3_numeric_operations` | 正负整数除法与余数、浮点误差、混合类型运算 |
+| `type_conversions.rs` | `lec3_type_conversions` | 窄化、转换顺序、有损转换与检查转换 |
+| `booleans.rs` | `lec3_booleans` | 条件类型、短路求值与非短路求值 |
+| `characters.rs` | `lec3_characters` | char、字节、UTF-8 长度与组合字符 |
 
-基础示例能直接运行。所有代码注释使用英文；TODO 是练习要求，不含扩展题答案。
+在 RustRover 中打开对应文件，点击 main 旁的运行按钮。也可以使用 `cargo run --bin lec3_type_inference`，替换最后的运行目标即可。
 
-每次只做一个实验：先预测，再写代码运行，把编译错误也作为观察结果。
-需要保持编译错误的例子，可以先记录错误，再注释掉这段实验代码。
+## 综合例题：类型推断、窄化和运算顺序
 
-## 综合题（自行实现）
+```rust
+fn main() {
+    let n = 300;
+    let m: u16 = n;
+    let k = n as u8;
 
-1. 声明没有类型标注的 `n = 300`，再声明 `m: u16 = n`。
-2. 用 `as u8` 得到 `k`。
-3. 对比“先做 k / 10 再转 f64”和“先把 k 转 f64 再除以 10.0”。
-4. 改变 m 的类型，重新检查 n 的推断结果以及程序能否编译。
+    println!("n = {n}, m = {m}, k = {k}"); // 300, 300, 44
+    println!("Divide first: {}", (k / 10) as f64); // 4
+    println!("Convert first: {}", k as f64 / 10.0); // 4.4
+}
+```
 
-### 我的预测
+`m: u16 = n` 约束了 n 的推断类型；`as u8` 才执行转换。300 窄化为 u8 后得到 44。整数除法先执行会丢掉小数部分，之后转成浮点数不会恢复它。
 
-### 对应代码位置
-
-### 实际结果与错因
-
-### 变式与待解决问题
+复习时先遮住输出注释，预测类型和结果，再运行确认。无需重新抄写所有示例。仅保留的两道动手题在 `tuples.rs` 和 `arrays.rs` 的结尾。

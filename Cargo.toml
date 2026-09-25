@@ -46,3 +46,11 @@ path = "src/lectures/lec3/booleans.rs"
 [[bin]]
 name = "lec3_characters"
 path = "src/lectures/lec3/characters.rs"
+
+[[bin]]
+name = "lec3_tuples"
+path = "src/lectures/lec3/tuples.rs"
+
+[[bin]]
+name = "lec3_arrays"
+path = "src/lectures/lec3/arrays.rs"
