@@ -4,9 +4,9 @@
 
 | 文件 | 运行目标 | 重点 |
 | --- | --- | --- |
-| `loop_expressions.rs` | `lec3_loop_expressions` | 无条件循环、break 返回值、unit |
-| `while_loops.rs` | `lec3_while_loops` | 先检查条件、状态更新、continue |
-| `for_loops.rs` | `lec3_for_loops` | 遍历、范围、倒序、索引、嵌套循环标签 |
+| `15_loop_expressions.rs` | `lec3_loop_expressions` | 无条件循环、break 返回值、unit |
+| `16_while_loops.rs` | `lec3_while_loops` | 先检查条件、状态更新、continue |
+| `17_for_loops.rs` | `lec3_for_loops` | 遍历、范围、倒序、索引、嵌套循环标签 |
 
 ## 三种循环
 

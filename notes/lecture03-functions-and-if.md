@@ -4,8 +4,8 @@
 
 | 文件 | 运行目标 | 内容 |
 | --- | --- | --- |
-| `functions.rs` | `lec3_functions` | 函数签名、参数、返回类型、块表达式、分号、打印与返回、参数的局部可变性 |
-| `if_expressions.rs` | `lec3_if_expressions` | 条件类型、分支顺序、if 的值、分支类型、提前返回、边界情况 |
+| `13_functions.rs` | `lec3_functions` | 函数签名、参数、返回类型、块表达式、分号、打印与返回、参数的局部可变性 |
+| `14_if_expressions.rs` | `lec3_if_expressions` | 条件类型、分支顺序、if 的值、分支类型、提前返回、边界情况 |
 
 ## 阅读代码时的三个检查点
 

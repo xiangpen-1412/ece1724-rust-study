@@ -9,68 +9,68 @@ publish = false
 
 [[bin]]
 name = "lec3_variables"
-path = "src/lectures/lec3/variables_and_mutability.rs"
+path = "src/lectures/lec3/01_variables_and_mutability.rs"
 
 [[bin]]
 name = "lec3_constants_static"
-path = "src/lectures/lec3/constants_and_static.rs"
+path = "src/lectures/lec3/02_constants_and_static.rs"
 
 [[bin]]
 name = "lec3_scope_shadowing"
-path = "src/lectures/lec3/scope_and_shadowing.rs"
+path = "src/lectures/lec3/03_scope_and_shadowing.rs"
 
 [[bin]]
 name = "lec3_input_parsing"
-path = "src/lectures/lec3/input_parsing.rs"
+path = "src/lectures/lec3/04_input_parsing.rs"
 
 [[bin]]
 name = "lec3_type_inference"
-path = "src/lectures/lec3/type_inference.rs"
+path = "src/lectures/lec3/05_type_inference.rs"
 
 [[bin]]
 name = "lec3_integer_types"
-path = "src/lectures/lec3/integer_types.rs"
+path = "src/lectures/lec3/06_integer_types.rs"
 
 [[bin]]
 name = "lec3_numeric_operations"
-path = "src/lectures/lec3/numeric_operations.rs"
+path = "src/lectures/lec3/07_numeric_operations.rs"
 
 [[bin]]
 name = "lec3_type_conversions"
-path = "src/lectures/lec3/type_conversions.rs"
+path = "src/lectures/lec3/08_type_conversions.rs"
 
 [[bin]]
 name = "lec3_booleans"
-path = "src/lectures/lec3/booleans.rs"
+path = "src/lectures/lec3/09_booleans.rs"
 
 [[bin]]
 name = "lec3_characters"
-path = "src/lectures/lec3/characters.rs"
+path = "src/lectures/lec3/10_characters.rs"
 
 [[bin]]
 name = "lec3_tuples"
-path = "src/lectures/lec3/tuples.rs"
+path = "src/lectures/lec3/11_tuples.rs"
 
 [[bin]]
 name = "lec3_arrays"
-path = "src/lectures/lec3/arrays.rs"
+path = "src/lectures/lec3/12_arrays.rs"
 
 [[bin]]
 name = "lec3_functions"
-path = "src/lectures/lec3/functions.rs"
+path = "src/lectures/lec3/13_functions.rs"
 
 [[bin]]
 name = "lec3_if_expressions"
-path = "src/lectures/lec3/if_expressions.rs"
+path = "src/lectures/lec3/14_if_expressions.rs"
 
 [[bin]]
 name = "lec3_loop_expressions"
-path = "src/lectures/lec3/loop_expressions.rs"
+path = "src/lectures/lec3/15_loop_expressions.rs"
 
 [[bin]]
 name = "lec3_while_loops"
-path = "src/lectures/lec3/while_loops.rs"
+path = "src/lectures/lec3/16_while_loops.rs"
 
 [[bin]]
 name = "lec3_for_loops"
-path = "src/lectures/lec3/for_loops.rs"
+path = "src/lectures/lec3/17_for_loops.rs"

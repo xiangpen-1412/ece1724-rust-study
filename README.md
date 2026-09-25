@@ -22,25 +22,27 @@ Cargo.toml                登记每个文件的运行目标
 
 ## Lecture 3 练习
 
+按文件名前缀 01 → 17 依次学习。编号对应学习顺序，运行目标名称保持不变。
+
 | 文件（位于 src/lectures/lec3/） | 运行目标 | 内容 |
 | --- | --- | --- |
-| `variables_and_mutability.rs` | `lec3_variables` | 变量与可变性 |
-| `constants_and_static.rs` | `lec3_constants_static` | 常量与 static |
-| `scope_and_shadowing.rs` | `lec3_scope_shadowing` | 作用域与 shadowing |
-| `input_parsing.rs` | `lec3_input_parsing` | 输入、trim、parse |
-| `type_inference.rs` | `lec3_type_inference` | 类型推断与类型约束 |
-| `integer_types.rs` | `lec3_integer_types` | 整数范围与溢出 |
-| `numeric_operations.rs` | `lec3_numeric_operations` | 浮点数、除法、余数与误差 |
-| `type_conversions.rs` | `lec3_type_conversions` | 显式转换、窄化与转换时机 |
-| `booleans.rs` | `lec3_booleans` | 条件类型与短路求值 |
-| `characters.rs` | `lec3_characters` | char、字节与 UTF-8 长度 |
-| `tuples.rs` | `lec3_tuples` | 元组、解构、unit 与返回多个值 |
-| `arrays.rs` | `lec3_arrays` | 数组、边界检查与二维数组 |
-| `functions.rs` | `lec3_functions` | 参数、返回值、块表达式与分号 |
-| `if_expressions.rs` | `lec3_if_expressions` | 条件分支、表达式类型与提前返回 |
-| `loop_expressions.rs` | `lec3_loop_expressions` | loop 与 break 返回值 |
-| `while_loops.rs` | `lec3_while_loops` | 条件循环与 continue |
-| `for_loops.rs` | `lec3_for_loops` | 遍历、范围、倒序与循环标签 |
+| `01_variables_and_mutability.rs` | `lec3_variables` | 变量与可变性 |
+| `02_constants_and_static.rs` | `lec3_constants_static` | 常量与 static |
+| `03_scope_and_shadowing.rs` | `lec3_scope_shadowing` | 作用域与 shadowing |
+| `04_input_parsing.rs` | `lec3_input_parsing` | 输入、trim、parse |
+| `05_type_inference.rs` | `lec3_type_inference` | 类型推断与类型约束 |
+| `06_integer_types.rs` | `lec3_integer_types` | 整数范围与溢出 |
+| `07_numeric_operations.rs` | `lec3_numeric_operations` | 浮点数、除法、余数与误差 |
+| `08_type_conversions.rs` | `lec3_type_conversions` | 显式转换、窄化与转换时机 |
+| `09_booleans.rs` | `lec3_booleans` | 条件类型与短路求值 |
+| `10_characters.rs` | `lec3_characters` | char、字节与 UTF-8 长度 |
+| `11_tuples.rs` | `lec3_tuples` | 元组、解构、unit 与返回多个值 |
+| `12_arrays.rs` | `lec3_arrays` | 数组、边界检查与二维数组 |
+| `13_functions.rs` | `lec3_functions` | 参数、返回值、块表达式与分号 |
+| `14_if_expressions.rs` | `lec3_if_expressions` | 条件分支、表达式类型与提前返回 |
+| `15_loop_expressions.rs` | `lec3_loop_expressions` | loop 与 break 返回值 |
+| `16_while_loops.rs` | `lec3_while_loops` | 条件循环与 continue |
+| `17_for_loops.rs` | `lec3_for_loops` | 遍历、范围、倒序与循环标签 |
 
 主要知识点和典型易错情况都提供完整、可运行的参考代码。代码注释使用简短英文，只保留必要规则和易错提醒；详细解释放在聊天和 notes 中。每一组新知识只留一至两道综合练习，其余示例可直接查看和运行。
 先在聊天里学知识与推理，再打开对应文件：预测结果、写代码、运行验证、记录错因。

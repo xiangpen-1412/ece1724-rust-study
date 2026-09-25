@@ -4,8 +4,8 @@
 
 | 文件 | 运行目标 | 内容 |
 | --- | --- | --- |
-| `src/lectures/lec3/tuples.rs` | `lec3_tuples` | 元组类型、解构、字段访问、可变性、单元素元组、unit、返回多个值 |
-| `src/lectures/lec3/arrays.rs` | `lec3_arrays` | 数组类型、重复初始化、修改元素、usize 索引、边界检查、二维数组 |
+| `src/lectures/lec3/11_tuples.rs` | `lec3_tuples` | 元组类型、解构、字段访问、可变性、单元素元组、unit、返回多个值 |
+| `src/lectures/lec3/12_arrays.rs` | `lec3_arrays` | 数组类型、重复初始化、修改元素、usize 索引、边界检查、二维数组 |
 
 ## 查阅要点
 
@@ -50,8 +50,8 @@ cargo run --bin lec3_arrays -- 4 --panic
 
 ## 只留两道动手题
 
-1. 在 `tuples.rs` 结尾完成坐标解构与 shadowing：先预测，再验证旧绑定和新元组分别是什么。
-2. 在 `arrays.rs` 结尾完成二维数组的安全写入：分别尝试合法与非法坐标，写入之前检查两个边界。
+1. 在 `11_tuples.rs` 结尾完成坐标解构与 shadowing：先预测，再验证旧绑定和新元组分别是什么。
+2. 在 `12_arrays.rs` 结尾完成二维数组的安全写入：分别尝试合法与非法坐标，写入之前检查两个边界。
 
 其余知识点都已有完整代码和说明，可以随时查看。
 
