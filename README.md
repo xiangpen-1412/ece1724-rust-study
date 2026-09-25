@@ -36,12 +36,14 @@ Cargo.toml                登记每个文件的运行目标
 | `characters.rs` | `lec3_characters` | char、字节与 UTF-8 长度 |
 | `tuples.rs` | `lec3_tuples` | 元组、解构、unit 与返回多个值 |
 | `arrays.rs` | `lec3_arrays` | 数组、边界检查与二维数组 |
+| `functions.rs` | `lec3_functions` | 参数、返回值、块表达式与分号 |
+| `if_expressions.rs` | `lec3_if_expressions` | 条件分支、表达式类型与提前返回 |
 
-数据类型、元组和数组的核心示例及典型易错点已经补全。所有代码注释使用英文，只在 tuples.rs 和 arrays.rs 结尾各留一道综合练习。
+主要知识点和典型易错情况都提供完整、可运行的参考代码。所有代码注释使用英文；每一组新知识只留一至两道综合练习，其余示例可直接查看和运行。
 先在聊天里学知识与推理，再打开对应文件：预测结果、写代码、运行验证、记录错因。
 故意制造编译错误的实验，观察完后先注释掉，方便继续运行其他练习。
 
-参考索引：[数据类型](notes/lecture03-data-types.md) · [元组与数组](notes/lecture03-compound-types.md)。
+参考索引：[数据类型](notes/lecture03-data-types.md) · [元组与数组](notes/lecture03-compound-types.md) · [函数与 if](notes/lecture03-functions-and-if.md)。
 
 ## 两台电脑同步
 

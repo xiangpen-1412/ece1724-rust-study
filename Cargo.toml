@@ -54,3 +54,11 @@ path = "src/lectures/lec3/tuples.rs"
 [[bin]]
 name = "lec3_arrays"
 path = "src/lectures/lec3/arrays.rs"
+
+[[bin]]
+name = "lec3_functions"
+path = "src/lectures/lec3/functions.rs"
+
+[[bin]]
+name = "lec3_if_expressions"
+path = "src/lectures/lec3/if_expressions.rs"
