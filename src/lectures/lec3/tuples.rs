@@ -15,9 +15,13 @@ fn announce() {
 
 fn main() {
     // Each position has its own type; the order and number of positions are fixed.
-    let record: (i32, f64, u8) = (120, 2.5, 3);
-    println!("Whole tuple: {record:?}");
-    println!("Fields: {}, {}, {}", record.0, record.1, record.2);
+    let record = (120, 2.5, 3);
+    println!("{:?}", record);
+    println!("{:#?}", record);
+    let one = record.0;
+    let two = record.1;
+    let three = record.2;
+    println!("{}, {}, {}", one, two, three);
 
     // Destructuring creates bindings by position. An underscore ignores a field.
     let (count, price, level) = record;
@@ -41,9 +45,10 @@ fn main() {
     // position = (1, 2, 3); // Error: a triple is not a pair.
 
     // Mutability belongs to each new binding independently.
-    let (mut row, column) = position;
-    row += 1;
-    println!("New bindings: ({row}, {column}); original: {position:?}");
+    let (mut row, _col) = position;
+    row = row + 4;
+    println!("Updated row: {row}");
+    println!("Original position: {position:?}");
     // Expected: new bindings (6, 4), original (5, 4).
 
     // The trailing comma makes a one-element tuple. Parentheses alone do not.
@@ -55,6 +60,8 @@ fn main() {
     let unit: () = ();
     let returned_unit: () = announce();
     let number = { 7 };
+
+    // return 7, no actual value inside
     let no_number = {
         7;
     };
@@ -63,8 +70,12 @@ fn main() {
     // Expected: 7 and (). The semicolon discards the expression's value.
 
     // One function result can contain multiple values.
-    let (area, perimeter) = rectangle_metrics(3, 4);
+    let width = 3;
+    let height = 4;
+    let (area, perimeter) = rectangle_metrics(width, height);
     println!("Rectangle: area = {area}, perimeter = {perimeter}"); // 12, 14
+
+    println!("{}", width);
 
     // TODO 1 of 2: combine tuples, destructuring, and shadowing.
     // Start with an immutable point (2_i32, 5_i32). Destructure it into row and column.
@@ -73,4 +84,15 @@ fn main() {
     // My prediction:
     // My code:
     // Actual result and explanation:
+
+    let hello = String::from("Hello, ");
+    let point = (hello, 0);
+    println!("{:?}", point);
+
+    let point_a = point;
+    println!("{:?}", point_a);
+    //
+    // let (row, col) = point;
+    // let point = (col, row);
+    // println!("{:?}", point);
 }
