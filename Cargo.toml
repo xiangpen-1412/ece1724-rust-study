@@ -22,3 +22,27 @@ path = "src/lectures/lec3/scope_and_shadowing.rs"
 [[bin]]
 name = "lec3_input_parsing"
 path = "src/lectures/lec3/input_parsing.rs"
+
+[[bin]]
+name = "lec3_type_inference"
+path = "src/lectures/lec3/type_inference.rs"
+
+[[bin]]
+name = "lec3_integer_types"
+path = "src/lectures/lec3/integer_types.rs"
+
+[[bin]]
+name = "lec3_numeric_operations"
+path = "src/lectures/lec3/numeric_operations.rs"
+
+[[bin]]
+name = "lec3_type_conversions"
+path = "src/lectures/lec3/type_conversions.rs"
+
+[[bin]]
+name = "lec3_booleans"
+path = "src/lectures/lec3/booleans.rs"
+
+[[bin]]
+name = "lec3_characters"
+path = "src/lectures/lec3/characters.rs"
