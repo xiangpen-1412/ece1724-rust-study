@@ -1,0 +1,14 @@
+# Rust build output
+/target/
+
+# Local IDE and operating system files
+/.idea/
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
