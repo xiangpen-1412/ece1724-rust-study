@@ -53,15 +53,19 @@ Cargo.toml                登记每个文件的运行目标
 
 ## Lecture 4 练习
 
-从 01 开始按顺序学习。本组对应讲义第 4–24 页：栈与堆、String、作用域、所有权、move、clone 和 Copy。
+从 01 开始按顺序学习。01–03 对应讲义第 4–24 页的所有权基础；04–07 对应第 25–45 页的函数所有权、引用与借用。
 
 | 文件（位于 src/lectures/lec4/） | 运行目标 | 内容 |
 | --- | --- | --- |
 | `01_string_and_scope.rs` | `lec4_string_and_scope` | String、长度与容量、作用域与释放 |
 | `02_move_and_clone.rs` | `lec4_move_and_clone` | 所有权转移、独立克隆与重新初始化 |
 | `03_copy_and_compound_values.rs` | `lec4_copy_and_compound_values` | Copy、元组与数组、部分移动 |
+| `04_function_ownership.rs` | `lec4_function_ownership` | 参数与返回值的所有权、求值顺序 |
+| `05_shared_references.rs` | `lec4_shared_references` | 共享引用与只读借用 |
+| `06_mutable_references.rs` | `lec4_mutable_references` | 可变引用、修改原值与解引用 |
+| `07_borrowing_rules.rs` | `lec4_borrowing_rules` | 借用冲突、最后一次使用与悬垂引用 |
 
-详细笔记：[所有权基础](notes/lecture04-01-ownership-basics.md)。下一组从函数参数与返回值的所有权开始。
+详细笔记：[所有权基础](notes/lecture04-01-ownership-basics.md) · [函数所有权与借用](notes/lecture04-02-functions-and-borrowing.md)。下一组从字符串切片开始。
 
 ## 两台电脑同步
 

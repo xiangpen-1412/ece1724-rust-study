@@ -86,3 +86,19 @@ path = "src/lectures/lec4/02_move_and_clone.rs"
 [[bin]]
 name = "lec4_copy_and_compound_values"
 path = "src/lectures/lec4/03_copy_and_compound_values.rs"
+
+[[bin]]
+name = "lec4_function_ownership"
+path = "src/lectures/lec4/04_function_ownership.rs"
+
+[[bin]]
+name = "lec4_shared_references"
+path = "src/lectures/lec4/05_shared_references.rs"
+
+[[bin]]
+name = "lec4_mutable_references"
+path = "src/lectures/lec4/06_mutable_references.rs"
+
+[[bin]]
+name = "lec4_borrowing_rules"
+path = "src/lectures/lec4/07_borrowing_rules.rs"
