@@ -11,13 +11,14 @@ SSH 地址：`git@github.com:xiangpen-1412/ece1724-rust-study.git`
 ```text
 src/main.rs               自己当前的练习入口
 src/lectures/lec3/         Lecture 3：每个知识点一个独立练习文件
+src/lectures/lec4/         Lecture 4：所有权与字符串，编号从 01 开始
 notes/                    自己的课堂笔记与练习记录
 Cargo.toml                登记每个文件的运行目标
 ```
 
 在 RustRover 中打开项目根目录。打开要练习的文件，点击 `fn main()` 旁的绿色运行按钮即可单独运行。
 
-在 `src/lectures/lec3/` 新增文件后，需要在 `Cargo.toml` 中增加对应的 `[[bin]]`，格式参考已有条目。
+在 `src/lectures/lec3/` 或 `src/lectures/lec4/` 新增文件后，需要在 `Cargo.toml` 中增加对应的 `[[bin]]`，格式参考已有条目。
 每个文件使用自己的 `fn main()`，不用把所有知识点堆在一起。
 
 ## Lecture 3 练习
@@ -49,6 +50,18 @@ Cargo.toml                登记每个文件的运行目标
 故意制造编译错误的实验，观察完后先注释掉，方便继续运行其他练习。
 
 参考索引：[数据类型](notes/lecture03-data-types.md) · [元组与数组](notes/lecture03-compound-types.md) · [函数与 if](notes/lecture03-functions-and-if.md) · [循环](notes/lecture03-loops.md)。
+
+## Lecture 4 练习
+
+从 01 开始按顺序学习。本组对应讲义第 4–24 页：栈与堆、String、作用域、所有权、move、clone 和 Copy。
+
+| 文件（位于 src/lectures/lec4/） | 运行目标 | 内容 |
+| --- | --- | --- |
+| `01_string_and_scope.rs` | `lec4_string_and_scope` | String、长度与容量、作用域与释放 |
+| `02_move_and_clone.rs` | `lec4_move_and_clone` | 所有权转移、独立克隆与重新初始化 |
+| `03_copy_and_compound_values.rs` | `lec4_copy_and_compound_values` | Copy、元组与数组、部分移动 |
+
+详细笔记：[所有权基础](notes/lecture04-01-ownership-basics.md)。下一组从函数参数与返回值的所有权开始。
 
 ## 两台电脑同步
 

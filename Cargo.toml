@@ -74,3 +74,15 @@ path = "src/lectures/lec3/16_while_loops.rs"
 [[bin]]
 name = "lec3_for_loops"
 path = "src/lectures/lec3/17_for_loops.rs"
+
+[[bin]]
+name = "lec4_string_and_scope"
+path = "src/lectures/lec4/01_string_and_scope.rs"
+
+[[bin]]
+name = "lec4_move_and_clone"
+path = "src/lectures/lec4/02_move_and_clone.rs"
+
+[[bin]]
+name = "lec4_copy_and_compound_values"
+path = "src/lectures/lec4/03_copy_and_compound_values.rs"
