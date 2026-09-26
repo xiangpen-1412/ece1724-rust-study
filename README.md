@@ -53,7 +53,7 @@ Cargo.toml                登记每个文件的运行目标
 
 ## Lecture 4 练习
 
-从 01 开始按顺序学习。01–03 对应讲义第 4–24 页的所有权基础；04–07 对应第 25–45 页的函数所有权、引用与借用。
+从 01 开始按顺序学习。01–03 对应讲义第 4–24 页的所有权基础；04–07 对应第 25–45 页的函数所有权、引用与借用；08–11 对应第 46–56 页的字符串与数组切片，并补充必要的 UTF-8 边界知识。
 
 | 文件（位于 src/lectures/lec4/） | 运行目标 | 内容 |
 | --- | --- | --- |
@@ -64,8 +64,12 @@ Cargo.toml                登记每个文件的运行目标
 | `05_shared_references.rs` | `lec4_shared_references` | 共享引用与只读借用 |
 | `06_mutable_references.rs` | `lec4_mutable_references` | 可变引用、修改原值与解引用 |
 | `07_borrowing_rules.rs` | `lec4_borrowing_rules` | 借用冲突、最后一次使用与悬垂引用 |
+| `08_first_word_index.rs` | `lec4_first_word_index` | 第一个单词、字节遍历与旧索引失效 |
+| `09_string_slices.rs` | `lec4_string_slices` | 切片范围、借用关系与 UTF-8 边界 |
+| `10_str_parameters.rs` | `lec4_str_parameters` | &str 参数、借用返回值与独立副本 |
+| `11_array_slices.rs` | `lec4_array_slices` | 数组切片、相对索引与可变切片 |
 
-详细笔记：[所有权基础](notes/lecture04-01-ownership-basics.md) · [函数所有权与借用](notes/lecture04-02-functions-and-borrowing.md)。下一组从字符串切片开始。
+详细笔记：[所有权基础](notes/lecture04-01-ownership-basics.md) · [函数所有权与借用](notes/lecture04-02-functions-and-borrowing.md) · [字符串与数组切片](notes/lecture04-03-slices.md)。下一组继续 String 的拼接、格式化和 Unicode 遍历。
 
 ## 两台电脑同步
 

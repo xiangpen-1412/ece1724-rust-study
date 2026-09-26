@@ -102,3 +102,19 @@ path = "src/lectures/lec4/06_mutable_references.rs"
 [[bin]]
 name = "lec4_borrowing_rules"
 path = "src/lectures/lec4/07_borrowing_rules.rs"
+
+[[bin]]
+name = "lec4_first_word_index"
+path = "src/lectures/lec4/08_first_word_index.rs"
+
+[[bin]]
+name = "lec4_string_slices"
+path = "src/lectures/lec4/09_string_slices.rs"
+
+[[bin]]
+name = "lec4_str_parameters"
+path = "src/lectures/lec4/10_str_parameters.rs"
+
+[[bin]]
+name = "lec4_array_slices"
+path = "src/lectures/lec4/11_array_slices.rs"
