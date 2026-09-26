@@ -26,7 +26,7 @@ fn main() {
     let edit = &mut text;
     edit.push_str(" D");
     println!("After scoped borrow: {text}");
-
+    
     // Ownership keeps the returned allocation alive.
     let returned = make_message();
     println!("Owned return: {returned}");

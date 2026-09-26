@@ -60,6 +60,7 @@ fn show_byte(value: u8) {
     // value = 20; // Error: immutable parameter.
 }
 
+// 函数内部是否能修改传入参数value的值，而不是修改原值
 fn increment_copy(mut value: i32) -> i32 {
     value += 1;
     value

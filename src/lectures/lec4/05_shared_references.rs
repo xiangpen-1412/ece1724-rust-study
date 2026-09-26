@@ -26,10 +26,23 @@ fn main() {
     view = &other;
     println!("After rebinding: {view}; original: {text}");
     // view.push('!'); // E0596: mut on the binding does not make &String mutable.
+
+    // test needs to be mutable
+    let mut test = String::from("Test string");
+    add_mark(&mut test);
+    println!("{}", test);
 }
 
 fn byte_len(s: &String) -> usize {
     s.len()
+}
+
+fn add_mark(s: &mut String) {
+    s.push_str(" marked");
+}
+
+fn increment_mark(number: &mut i32) {
+    *number += 1;
 }
 
 // fn append_through_shared(mut s: &String) {

@@ -21,4 +21,15 @@ fn main() {
     // let invalid = loop { if true { break 1; } else { break "one"; } };
 
     // TODO 1: find the first multiple of 7 greater than 20 using loop and break value.
+    let mut counter = 7;
+
+    // 这个counter不会进入scope，until returns
+    let counter = loop {
+        if counter > 20 {
+            break counter;
+        }
+        counter += 7;
+    };
+
+    println!("{}", counter);
 }

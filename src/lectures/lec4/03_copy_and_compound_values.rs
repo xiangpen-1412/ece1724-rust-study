@@ -22,6 +22,7 @@ fn main() {
 
     // An array is Copy when its element type is Copy.
     let numbers = [1, 2, 3];
+    let numbers = [1; 2];
     let mut copied_numbers = numbers;
     copied_numbers[0] = 9;
     println!("Array: {numbers:?}; changed copy: {copied_numbers:?}");
@@ -32,8 +33,14 @@ fn main() {
     // println!("{names:?}"); // E0382: String elements make this array non-Copy.
 
     // Partial move: the remaining Copy field is still usable.
-    let item = (String::from("book"), 2_i32);
+    let mut item = (String::from("book"), 2_i32);
+    // let title = item.0.clone();
     let title = item.0;
+    // let title = &item.0;
+
+    // have to put mut before item
+    item.0 = String::from("author");
+
     println!("Moved field: {title}; remaining field: {}", item.1);
     // println!("{item:?}"); // E0382: the whole tuple is partly moved.
 }

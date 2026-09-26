@@ -2,6 +2,7 @@ fn main() {
     // A literal is &str; String owns growable text.
     let literal: &str = "Rust";
     let mut owned = String::from(literal);
+    owned.push_str("\0");
     owned.push_str(" study");
     owned.push('!');
     println!("Literal: {literal}; owned: {owned}");

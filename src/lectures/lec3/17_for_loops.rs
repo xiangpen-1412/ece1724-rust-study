@@ -47,6 +47,17 @@ fn main() {
     println!("First even number: {}", first_even()); // 2
 
     // TODO 2: use enumerate() to find (index, maximum) in [12, 7, 19, 5].
+    let arr = [12, 7, 19, 15];
+    let mut max = values[0];
+    let mut i = 0;
+    for (index, &value) in arr.iter().enumerate() {
+        if value > max {
+            max = value;
+            i = index;
+        }
+    };
+    println!("{}", max);
+    println!("{}", i);
 }
 
 fn first_even() -> i32 {

@@ -29,6 +29,8 @@ fn main() {
     } else {
         'F'
     };
+    //
+    // let grade = if score > 70 {20} else {0};
     println!("Broad condition first: {misleading_grade}; specific first: {grade}"); // C, A
 
     // Branch tails supply values; the outer semicolon ends let.
