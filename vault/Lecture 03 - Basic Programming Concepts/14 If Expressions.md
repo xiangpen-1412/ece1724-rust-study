@@ -1,6 +1,6 @@
 # 14 If Expressions
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 An ordinary `if` condition must produce `bool`: write `number > 0`, not just `number`. Assignment such as `number = 0` produces unit, so it is not a valid condition either.
 

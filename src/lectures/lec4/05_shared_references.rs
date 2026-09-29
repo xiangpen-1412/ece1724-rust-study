@@ -1,50 +1,49 @@
+
+fn dereference_num() {
+    let number = 7;
+    println!("{}", number);
+
+    let r = &number;
+    let number = *r;
+    println!("{}", number);
+}
+
+fn dereference_str() {
+    let text = String::from("hello");
+    let reference = &text;
+
+    // error: giving ownership of text to owned, not permitted
+    // let owned = *reference;
+    // *reference represents you find a string location, but it's owned by text
+
+    let _len = (*reference).len();
+    println!("{}", *reference);
+    let a = (*reference).clone();
+    println!("{}", a);
+}
+
+fn byte_length(text: &String) -> usize {
+    text.len()
+}
+
 fn main() {
-    // &String borrows the value without taking ownership.
-    let text = String::from("Rust");
-    println!("First byte length: {}", byte_len(&text));
-    println!("Second byte length: {}", byte_len(&text));
-    println!("The caller still owns: {text}");
+    // Practice 05: Shared references and reading without ownership transfer.
+    let message = String::from("hello");
 
-    // Multiple shared references may coexist.
-    let first: &String = &text;
-    let second: &String = &text;
-    println!("Shared views: {first} / {second}");
-    println!(
-        "Lengths through both: {} / {}",
-        byte_len(first),
-        byte_len(second)
-    );
+    let first = byte_length(&message);
+    let second = byte_length(&message);
 
-    // len counts UTF-8 bytes, not characters.
-    let unicode = String::from("中");
-    println!("UTF-8 byte length: {}", byte_len(&unicode)); // 3
+    println!("{message}: {first}, {second}");
 
-    // mut allows rebinding the shared reference.
-    let other = String::from("another String");
-    let mut view: &String = &text;
-    println!("Before rebinding: {view}");
-    view = &other;
-    println!("After rebinding: {view}; original: {text}");
-    // view.push('!'); // E0596: mut on the binding does not make &String mutable.
+    dereference_num();
+    dereference_str();
 
-    // test needs to be mutable
-    let mut test = String::from("Test string");
-    add_mark(&mut test);
-    println!("{}", test);
+    // test
+    let mut text = String::from("ab");
+    let length = byte_length(&text);
+
+    text.push('c');
+
+    // 2 abc
+    println!("{length} {text}");
 }
-
-fn byte_len(s: &String) -> usize {
-    s.len()
-}
-
-fn add_mark(s: &mut String) {
-    s.push_str(" marked");
-}
-
-fn increment_mark(number: &mut i32) {
-    *number += 1;
-}
-
-// fn append_through_shared(mut s: &String) {
-//     s.push('!'); // E0596: shared access cannot mutate the String.
-// }

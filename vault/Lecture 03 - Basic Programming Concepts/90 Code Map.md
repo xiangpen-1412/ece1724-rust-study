@@ -1,6 +1,6 @@
 # Lecture 3 Code Map
 
-[[00 Start Here|Vault home]] · [[00 Lecture 03 Overview|Lecture 3 overview]] · [[99 Review Checklist|Review checklist]]
+[[00 Start Here|Vault home]] · [[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/99 Review Checklist|Review checklist]]
 
 Every topic below maps to one existing runnable example. All source files are under `src/lectures/lec3/`, relative to the repository root.
 

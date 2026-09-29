@@ -1,30 +1,23 @@
 fn main() {
-    let mut title = String::from("Lecture 4");
-    append_suffix(&mut title);
-    println!("Updated original: {title}");
+    // Practice 06: Mutable references and changing the borrowed value.
+    let mut message = String::from("ready");
+    append_mark(&mut message);
 
-    let mut attempts = 2;
-    increment(&mut attempts);
-    println!("Updated number: {attempts}"); // 3
-
-    // Method calls automatically dereference the receiver.
-    let edit = &mut title;
-    edit.push('!');
-    println!("After method call: {title}");
-
-    // TODO: Write push_tag(text: &mut String) to append " [checked]"; call it here.
+    let mut text = String::from("hello");
+    let len = mark(&mut text);
+    println!("{} {}", text, len);
 }
 
-// The referent is mutable; the parameter binding need not be.
-fn append_suffix(text: &mut String) {
-    text.push_str(" notes");
+fn append_mark(text: &mut String) {
+    text.push_str("Hello World");
 }
 
-fn increment(number: &mut i32) {
-    *number += 1; // Change the referenced integer.
+fn decorate(mut text: String) -> String {
+    text.push('!');
+    text
 }
 
-// A shared reference does not permit this mutation.
-// fn edit_shared(text: &String) {
-//     text.push_str("!"); // E0596
-// }
+fn mark(text: &mut String) -> usize {
+    text.push('!');
+    text.len()
+}

@@ -1,6 +1,6 @@
 # 13 Functions and Expressions
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 A function's signature defines the types accepted from its caller and the value returned on normal completion. Parameters require explicit types. Omitting `-> Type` means a return type of `()`, not an inferred return type. Function names conventionally use `snake_case`; a visible function may be defined after its call.
 

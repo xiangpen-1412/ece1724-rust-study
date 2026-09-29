@@ -1,6 +1,6 @@
 # 17 For Loops and Labels
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 `for` obtains each item from an iterator and runs its body once per item. It manages traversal, so a separate counter update is usually unnecessary.
 

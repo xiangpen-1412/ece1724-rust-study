@@ -1,6 +1,6 @@
 # Lecture 3 Review Checklist
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 Use this page for active recall. Explain a rule, predict an example, and then verify it with the matching topic note or source file. The checklist revisits taught material rather than adding another lecture.
 

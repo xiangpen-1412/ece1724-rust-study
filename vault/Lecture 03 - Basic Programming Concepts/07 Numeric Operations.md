@@ -1,6 +1,6 @@
 # 07 Numeric Operations
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 Source: `src/lectures/lec3/07_numeric_operations.rs` ([GitHub](https://github.com/xiangpen-1412/ece1724-rust-study/blob/main/src/lectures/lec3/07_numeric_operations.rs)).
 

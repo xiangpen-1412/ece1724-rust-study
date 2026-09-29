@@ -1,6 +1,6 @@
 # 15 Loop Expressions
 
-[[00 Lecture 03 Overview|Lecture 3 overview]] · [[90 Code Map|Code map]]
+[[Lecture 03 Overview|Lecture 3 overview]] · [[Lecture 03 - Basic Programming Concepts/90 Code Map|Code map]]
 
 `loop` repeats its body without an automatic stopping condition. A condition inside the body may decide when to exit. Reaching the closing brace starts another iteration; a final expression alone does not exit the loop.
 

@@ -1,30 +1,42 @@
 fn main() {
-    // Moving transfers ownership; the old binding cannot be used.
-    let first = String::from("Rust");
+    // Practice 02: Move, clone, and reinitialization.
+    let a = String::from("ticket");
+    let _b = a;
+    // Value used after being moved[E0382]
+    // println!("{a}, {b}");
+
+    let original = String::from("draft");
+    let mut edited = original;
+    edited.push_str(" v2");
+    println!("Edited: {edited:?}");
+
+    let mut status = String::from("waiting");
+    status = String::from("done");
+
+    let mut current = String::from("old");
+    let saved = current;
+    // Value used after being moved[E0382]
+    // println!("{}", current);
+
+    // reassign but not reuse after move
+    // 不能读取已经移走的值；合法地重新初始化以后，可以使用新值。
+    current = String::from("new");
+
+    // clone can avoid moving
+    let mut original = String::from("report");
+    let mut revised = original.clone();
+    original.push_str(" Revised");
+    revised.push_str(" v2");
+
+    println!("{}", original);
+    println!("{}", revised);
+
+    // integers (bool & char) are not affected
+    let mut i:i32 = 0;
+    let mut j = i;
+    i += 1;
+
+    let first: &str = "second";
     let second = first;
-    // println!("{first}"); // E0382: first was moved.
-    println!("New owner: {second}");
-
-    // Formatting borrows the value, so second still owns it.
-    println!("Same owner, printed again: {second}");
-
-    // Cloning creates independent String contents.
-    let original = String::from("Rust");
-    let mut cloned = original.clone();
-    cloned.push_str(" clone");
-    println!("Original: {original}; clone: {cloned}");
-
-    // Mutability belongs to the new binding.
-    let fixed = String::from("editable after move");
-    let mut editable = fixed;
-    editable.push('!');
-    println!("Mutable new owner: {editable}");
-
-    // A moved mutable binding can receive a new value.
-    let mut buffer = String::from("first value");
-    let old_owner = buffer;
-    buffer = String::from("second value");
-    println!("Old owner: {old_owner}; reinitialized buffer: {buffer}");
-
-    // TODO: clone a String, move the original into a new binding, then print both owners.
+    println!("{}", first);
 }

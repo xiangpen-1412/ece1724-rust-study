@@ -1,47 +1,48 @@
 fn main() {
-    // Passing String by value moves it into the function.
-    let message = String::from("hello");
-    consume_string(message);
-    // println!("{message}"); // E0382: message was moved.
+    // Practice 04: Ownership in function arguments and return values.
 
-    // i32 arguments are copied.
-    let number = 7;
-    print_number(number);
-    println!("Caller still has: {number}");
+    let message = String::from("ready");
 
-    // Returning String transfers ownership to the caller.
-    let created = make_message();
-    println!("Returned String: {created}");
+    // Value used after being moved [E0382]
+    // inspect(message);
 
-    let source = String::from("Rust");
-    let updated = append_suffix(source);
-    println!("Consumed, modified, returned: {updated}");
+    // ownership: message -> decorate -> new_message
+    let new_message = decorate(message);
 
-    // Return the owned value together with a computed result.
-    let text = String::from("Rust");
-    let (text, length) = return_with_length(text);
-    println!("Returned tuple: {text}; byte length: {length}");
+    // still error, cannot get ownership back
+    // println!("{}", message);
+    println!("{new_message}");
+
+    let original = String::from("Q");
+    let count = 2;
+
+    let (updated, next) = revise(original.clone(), count);
+
+    println!("{original}|{updated}|{count}|{next}");
 }
 
-fn consume_string(s: String) {
-    println!("Function owns: {s}");
-} // s is dropped here.
-
-fn print_number(n: i32) {
-    println!("Function received a copy: {n}");
+// this fn takes the ownership of message
+fn inspect(message: String) {
+    println!("{}", message);
 }
 
-fn make_message() -> String {
-    String::from("made inside the function")
+// integers are okay
+fn increase(message: i32) {
+    println!("{}", message);
 }
 
-fn append_suffix(mut s: String) -> String {
-    s.push_str(" study");
-    s
+fn decorate(message: String) -> String{
+    println!("{}", message);
+    message
 }
 
-fn return_with_length(s: String) -> (String, usize) {
-    // return (s, s.len()); // E0382: s moves before len is read.
-    let length = s.len();
-    (s, length)
+fn describe(text: String) -> (usize, String) {
+    // (text, text.len()) Error: text used after moved
+    (text.len(), text)
 }
+
+fn revise(mut text: String, count: i32) -> (String, i32) {
+    text.push('!');
+    (text, count + 1)
+}
+
