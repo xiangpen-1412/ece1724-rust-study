@@ -1,0 +1,3 @@
+# Keep device-specific Obsidian settings and workspace state local.
+.obsidian/
+.trash/
