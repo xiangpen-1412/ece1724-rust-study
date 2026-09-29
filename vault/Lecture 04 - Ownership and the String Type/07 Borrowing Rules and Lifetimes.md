@@ -4,6 +4,23 @@
 
 For the same data, shared reads may coexist; mutable access must be exclusive. References must remain valid when used. These restrictions help safe Rust prevent data races, but do not eliminate all logical race conditions. They also apply in single-threaded code.
 
+> [!important] **Exclusive borrow: access through the mutable reference**
+> **While edit: &mut String has a later use**, do not bypass it through owner text. Direct owner reads (including println! or text.len()), mutation, move, &text, and another &mut text conflict.
+> Read or mutate through edit instead. A temporary shared reborrow such as &*edit is allowed; wait until its last use before mutating through edit.
+> **After edit's last use**, direct access through text is allowed again, even before the closing brace.
+> With read: &String, other owner reads may coexist; owner mutation or move must wait until read's last use.
+
+```rust
+let mut text = String::from("A");
+let edit = &mut text;
+// println!("{text}"); // Error if edit is used later: owner read conflicts.
+// let read = &text;  // Error if edit is used later: direct shared borrow conflicts.
+let view = &*edit;    // Allowed: shared reborrow through edit.
+println!("{view}");   // Last use of view.
+edit.push('!');      // Allowed after view's last use.
+println!("{text}");   // Allowed after edit's last use: A!
+```
+
 **Track the required use interval, not merely the closing brace.**
 
 ```rust

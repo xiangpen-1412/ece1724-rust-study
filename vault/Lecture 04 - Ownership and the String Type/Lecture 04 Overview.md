@@ -22,12 +22,12 @@ This lecture covers Rust Book **Chapter 4 and Section 8.2**: who owns data, how 
 | 12 | [[12 String Operations]] | String construction, push/push_str, ownership in +, format! |
 | 13 | [[13 UTF-8 and String Indexing]] | Bytes/scalars/graphemes, iteration, invalid indexing, slice boundaries and checked access |
 
-The first eleven note numbers match existing Lecture 4 source-file numbers. Topics 12 and 13 complete the lecture's String material; they do not yet have dedicated source files. See the code map for exact paths and available run targets.
+All thirteen note numbers match Lecture 4 practice-file numbers. Topics 12 and 13 complete the lecture's String material and now have dedicated practice shells. See the code map for exact paths and available run targets.
 
 ## Reading order and scope
 
 Topics 01–03 establish ownership (slides 4–24); 04–07 apply it to functions and references (25–45); 08–11 introduce slices (46–56); 12–13 cover String operations and UTF-8 (57–67). The notes distinguish compiler errors, runtime panics, and valid programs with incorrect results.
 
-Structs belong to Lecture 5 / Book 5.1 and are not added to this lecture. Related background: [[Lecture 03 Overview|Lecture 3]].
+Continue with [[Lecture 05 Overview|Lecture 5: Structs]], limited to Book Section 5.1. Related background: [[Lecture 03 Overview|Lecture 3]].
 
 [Lecture 4 slides](https://iqua.ece.toronto.edu/baochun/ece1724/slides/lecture4.html) · [Rust Book Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) · [Rust Book Section 8.2](https://doc.rust-lang.org/book/ch08-02-strings.html)

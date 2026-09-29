@@ -6,6 +6,7 @@ rust-version = "1.98.1"
 publish = false
 
 [dependencies]
+log = "0.4.34"
 
 [[bin]]
 name = "lec3_variables"
@@ -118,3 +119,27 @@ path = "src/lectures/lec4/10_str_parameters.rs"
 [[bin]]
 name = "lec4_array_slices"
 path = "src/lectures/lec4/11_array_slices.rs"
+
+[[bin]]
+name = "lec4_string_operations"
+path = "src/lectures/lec4/12_string_operations.rs"
+
+[[bin]]
+name = "lec4_utf8_and_indexing"
+path = "src/lectures/lec4/13_utf8_and_indexing.rs"
+
+[[bin]]
+name = "lec5_structs_and_fields"
+path = "src/lectures/lec5/01_structs_and_fields.rs"
+
+[[bin]]
+name = "lec5_builders_and_shorthand"
+path = "src/lectures/lec5/02_builders_and_shorthand.rs"
+
+[[bin]]
+name = "lec5_struct_update"
+path = "src/lectures/lec5/03_struct_update.rs"
+
+[[bin]]
+name = "lec5_tuple_and_unit_structs"
+path = "src/lectures/lec5/04_tuple_and_unit_structs.rs"

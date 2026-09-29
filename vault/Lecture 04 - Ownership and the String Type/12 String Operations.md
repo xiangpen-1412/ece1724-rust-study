@@ -4,42 +4,64 @@
 
 ## Build and combine owned text
 
-`String::new()` creates an empty String. `String::from("text")` and `"text".to_string()` create owned text from a literal. A mutable String can grow while retaining valid UTF-8.
+`String::new()` creates empty owned text. `String::from("red")` and `"red".to_string()` create owned text from a literal. `push_str` appends the contents of a borrowed `&str`; `push` appends one `char`.
 
 ```rust
 fn main() {
+    let mut piece = String::from("red");
     let mut left = String::new();
-    left.push_str("red");
+    left.push_str(&piece);
     left.push('!');
-    let right = "blue".to_string();
 
-    let preview = format!("{left}/{right}");
+    let snapshot = format!("{left}/{piece}");
+    piece.clear();
+    let right = "blue".to_string();
     let joined = left + &right;
-    println!("{preview} | {joined} | {right}");
-    // red!/blue | red!blue | blue
+    println!("{snapshot} | {joined} | {right}");
+    // red!/red | red!blue | blue
     // println!("{left}"); // Error: + consumed left.
 }
 ```
 
-Their ownership effects differ:
-
-| Operation | Effect |
-| --- | --- |
-| `text.push_str(piece)` | Borrow a string slice and append its contents |
-| `text.push(character)` | Append one `char` |
-| `left + &right` | Consume left, borrow right, return String |
-| `format!("{left}/{right}")` | Borrow these inputs and create a new String |
+Appending copies the source's bytes into the destination; it does not store a reference to the source. Clearing `piece` therefore changes neither `left` nor `snapshot`. The latter is also an independent String: `format!` borrows these inputs while constructing its result, without retaining those borrows.
 
 ## Read the ownership contract
 
-For String addition, the left operand becomes the method's owned `self`; the appended operand is borrowed as `&str`. This explains why `left` becomes unavailable while `right` remains usable. The left binding does not need `mut` for ownership to be consumed.
+`left + &right` takes the left String by value and borrows the appended text as `&str`. It returns a String, consumes `left`, and leaves `right` usable. The left binding does **not** need `mut` for addition; this example needs `mut` only for earlier appends. Writing `&left + &right` is not a supported replacement.
 
-`push_str(&right)` also leaves `right` usable. Appending its contents changes the destination, not the source. `push` takes a single-quoted character such as `'!'`; `push_str` takes text such as `"!"`.
+A chain such as `a + "-" + &b` consumes `a` and successive intermediate Strings. Use `format!("{a}-{b}")` when both inputs should remain usable. Neither technique requires manually cloning both inputs.
 
-Formatting combines several pieces while keeping the original Strings usable.
+## Quick check
+
+After `let view = &piece`, would `piece.clear(); println!("{view}");` work like the snapshot example?
+
+**Answer:** No. `view` borrows the original String, so its later use conflicts with `clear()`. `push_str` and `format!` produce stored text that does not keep the source borrowed; creating a reference does.
+
+## Note
+
+1. Format creates a new string, changing old won't affect it
+
+```rust
+fn main() {
+    let mut left = String::from("red");
+    let right = String::from("blue");
+	
+	// saved will not be changed by changing left or right
+    let saved = format!("{left}/{right}");
+
+    left.push('!');
+    let joined = left + &right;
+
+    println!("{saved}");
+    println!("{joined}");
+    println!("{right}");
+}
+```
 
 ## Code reference
 
-No dedicated practice file exists yet. Revisit basic creation and appending in `src/lectures/lec4/01_string_and_scope.rs`.
+Practice file: `src/lectures/lec4/12_string_operations.rs`
+
+Run: `cargo run --bin lec4_string_operations`
 
 [Rust Book: Strings](https://doc.rust-lang.org/book/ch08-02-strings.html)

@@ -17,8 +17,8 @@ Practice code stays in `src/lectures/lec4/`, relative to the repository root. Th
 | [[09 String Slices]] | [09_string_slices.rs](https://github.com/xiangpen-1412/ece1724-rust-study/blob/main/src/lectures/lec4/09_string_slices.rs) | `lec4_string_slices` |
 | [[10 str Parameters and Borrowed Results]] | [10_str_parameters.rs](https://github.com/xiangpen-1412/ece1724-rust-study/blob/main/src/lectures/lec4/10_str_parameters.rs) | `lec4_str_parameters` |
 | [[11 Array Slices]] | [11_array_slices.rs](https://github.com/xiangpen-1412/ece1724-rust-study/blob/main/src/lectures/lec4/11_array_slices.rs) | `lec4_array_slices` |
-| [[12 String Operations]] | No dedicated file yet; related practice: file 01 | No dedicated target |
-| [[13 UTF-8 and String Indexing]] | No dedicated file yet; related practice: files 01 and 09 | No dedicated target |
+| [[12 String Operations]] | `src/lectures/lec4/12_string_operations.rs` | `lec4_string_operations` |
+| [[13 UTF-8 and String Indexing]] | `src/lectures/lec4/13_utf8_and_indexing.rs` | `lec4_utf8_and_indexing` |
 
 Open the source file in RustRover and run its `main`, or use the matching target from the repository root:
 

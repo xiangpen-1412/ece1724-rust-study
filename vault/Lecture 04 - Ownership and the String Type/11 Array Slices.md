@@ -30,6 +30,27 @@ Slice indices start at zero. Here `edit[0]` refers to `values[1]`. Array-slice l
 
 Copying a shared slice reference still accesses the original elements; it creates no independent array.
 
+## Note
+
+1. Use of owner before the end of reference
+
+```rust
+fn test() {  
+    let mut values = [10, 20, 30, 40];  
+    let snapshot = values;  
+  
+    let part = &mut values[1..3];  
+  
+    part[0] += 5; 
+    // error: last use of borrowed reference still exists 
+    // println!("{values:?}");  
+    part[1] *= 2;  
+  
+    println!("{part:?}");  
+    println!("{snapshot:?}");  
+    println!("{values:?}");  
+}
+```
 ## Code reference
 
 Practice file: `src/lectures/lec4/11_array_slices.rs`

@@ -35,6 +35,21 @@ A returned `usize` does not keep the source borrowed. A returned `&str` does: mo
 
 For an independent result, `first_word(&owned).to_owned()` creates a String containing copied text. Calling `.clone()` on an `&str` instead copies its reference, not the borrowed bytes.
 
+## Note
+
+1. Clear text before reference 
+
+```rust
+fn main() {
+	let mut text = String::from("red blue");
+	// word is a slice of text reference
+	let word = first_word(&text);
+
+	// error: reference of text word still in use
+	text.clear();
+	println!("{word}");
+}
+```
 ## Code reference
 
 Practice file: `src/lectures/lec4/10_str_parameters.rs`

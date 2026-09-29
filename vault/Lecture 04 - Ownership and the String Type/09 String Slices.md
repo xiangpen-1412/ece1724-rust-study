@@ -32,6 +32,35 @@ fn main() {
 
 A literal such as `"red"` is already `&str`. Invalid byte boundaries cause a runtime panic, covered in [[13 UTF-8 and String Indexing]].
 
+## Note
+
+1. Error
+```rust
+fn error() {  
+    let text = String::from("hello");  
+    let first = &text[..3];  
+    
+	// error: first is &str, part of text
+    text.clear();  
+    // error: same reason
+    text.push_str(" green");
+    
+    println!("{first}");  
+}
+```
+
+2. Correct
+
+```rust
+fn test() {  
+    let mut text = String::from("hello");  
+    let first = &text[..3];  
+    
+    // copy part of text, and create a new string, no error
+    let second= first.to_owned();  
+    text.clear();  
+}
+```
 ## Code reference
 
 Practice file: `src/lectures/lec4/09_string_slices.rs`
