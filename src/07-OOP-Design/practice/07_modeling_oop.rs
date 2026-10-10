@@ -1,52 +1,47 @@
 /*
-07 — Enum 建模与 OOP 特征（Lecture 5 后半；Book 18.1 概念）
+07 - Enum modeling and OOP (Lecture 5; Book 18.1 concepts)
 
-课件收尾：先完成 01–06。Quiz 3 公告范围是 Chapters 5 and 6，
-这里的 Book 18.1 OOP 概念不属于公告列出的重点；时间紧时放在最后。
+Finish lessons 01-06 first. The Quiz 3 announcement lists Book Chapters 5
+and 6. The Book 18.1 OOP discussion completes the lecture but is not part
+of those announced chapters.
 
-题 1｜组合判断：让不合法状态无法被构造
+Question 1 - Make invalid states unrepresentable
 
-某设计用两个 bool 表示下载状态：finished、failed。
-这里 finished 表示“已经终止，无论成功还是失败”，failed 表示“以失败终止”。
-业务只允许 Pending（未结束）、Succeeded（成功）、Failed（失败）三种状态；
-Succeeded 必须有保存路径 String，Failed 必须有错误原因 String。
+A design uses finished and failed booleans. Here finished means terminated
+(successfully or unsuccessfully), and failed means terminated with failure.
+Valid states are Pending, Succeeded with a String path, and Failed with a
+String reason. List the four boolean combinations and identify the invalid one.
+Design enum Download with the required states and payloads. Do not use two
+booleans plus two Option<String> fields.
 
-先列出两个 bool 的四种组合，说明哪种组合无法表达有效业务状态。
-再自己设计一个 enum Download，满足上面的三种状态以及各自必需的数据；
-不要使用“两个 bool 加两个 Option<String>”的方式。
+Construct all three states. Write a borrowing describe function with an
+exhaustive match: Pending prints a waiting message, Succeeded the path,
+and Failed the reason. Keep the original usable for Debug printing; no cloning.
+Is 'three variants means only three possible values' correct? Explain using
+String payloads. Explain OR for enum alternatives and AND for struct fields.
 
-构造三种状态，写一个借用 Download 的 describe 函数并穷尽 match：
-Pending 显示等待；Succeeded 显示路径；Failed 显示原因。
-调用后原值必须仍可用于 Debug 打印，不能 clone。
+Question 2 - Encapsulation, composition, and receivers
 
-最后判断：“enum 一共有三个 variant，所以它只能表示三个不同的值。”
-这个说法正确吗？用自己设计中的 String payload 解释。
-说明这里 enum 的 OR 与 struct 字段的 AND 分别指什么。
+Create an audio module exposing Volume with a private level: u8 in 0..=10.
+Provide new() starting at zero, level(), and set_level(requested: u8) -> bool.
+Accept valid values and reject invalid values without changing the old level.
+Outside audio, define Player containing Volume and forwarding read/update
+methods. Check initial zero, setting 7, trying 11, and the final level;
+record return values and state. Temporarily try to change Volume's private
+field from main and explain the access boundary.
 
-题 2｜提高：封装、组合与 receiver 一起设计
-
-自己建立 audio module，在其中定义对外可用的 Volume。
-内部保存 level: u8，约定合法范围为 0..=10；外部不能直接改 level。
-提供 new()（初始为 0）、level() 和 set_level(requested: u8) -> bool。
-set_level 接受合法值，拒绝非法值，并在拒绝后保留原 level。
-
-在 audio module 外自己定义 Player，里面保存一个 Volume；
-给 Player 写转发的读取/修改方法，让 main 可以通过 Player 调节音量。
-亲自检查：初始 0 → 设置 7 → 尝试设置 11 → 最后读取，记录每步返回值和状态。
-再临时尝试从 main 直接改 Volume 的私有字段，解释编译器拒绝的边界。
-
-用三句短话回答，不要求写 trait：
-1. 为什么“把数据放在 struct、行为放在 impl”可以符合部分 OOP 定义？
-2. 为什么 Player 包含 Volume 并不等于 Player 继承了 Volume？
-3. Rust 中 trait/泛型与多态的联系是什么，它们会自动给 struct 继承字段吗？
+Answer briefly without implementing a trait:
+1. How do struct data and impl behavior satisfy some OOP definitions?
+2. Why is Player containing Volume composition rather than inheritance?
+3. How do traits and generics relate to polymorphism? Do they inherit fields?
 */
 
-// TODO：自己写 Download、describe、audio module、Player 与方法。
+// TODO: Define the required types and functions yourself.
 
 fn main() {
-    // 题 1 状态表与判断：
-    // TODO：写代码。
+    // Question 1: Record predictions, then write and verify your code.
+    // TODO: Add your work here.
 
-    // 题 2 预测与检查：
-    // TODO：写代码和概念回答。
+    // Question 2: Record predictions and explain your implementation.
+    // TODO: Add your work here.
 }
