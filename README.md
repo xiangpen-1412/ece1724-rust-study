@@ -37,7 +37,7 @@ cargo check --all-targets
 
 ## 笔记与同步
 
-长期笔记放在独立的 [Rust_Tutorial](https://github.com/xiangpen-1412/Rust_Tutorial)，本机位置为 `/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial`。笔记按相同的七个知识模块对应本工程。
+长期笔记放在独立的 [Rust_Tutorial](https://github.com/xiangpen-1412/Rust_Tutorial)，本机位置为 `/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial`。笔记按 Basics、Data Structures、Memory、Type System、OOP 分层，目录和文件均按讲义顺序编号；每篇概念笔记链接到本工程对应代码。
 
 另一台电脑克隆代码仓库时，文件夹命名为 RustLab 即可：
 
