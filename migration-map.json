@@ -1,0 +1,519 @@
+{
+  "source_head": "88b47a073e791ef15a4736745788ecc6c12b5f65",
+  "final_project": "/Users/xiangpengji/RustroverProjects/RustLab",
+  "source_files_unchanged": true,
+  "original_file_count": 44,
+  "practice_file_count": 7,
+  "records": [
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/main.rs",
+      "target": "src/main.rs",
+      "sha256": "2de385d8154a77ec8609941173948d423f93c6476baaf33f94c8a1b0af6a31cc",
+      "bytes": 324,
+      "old_bin": "ece1724-rust-study",
+      "bin": "scratch",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/01_variables_and_mutability.rs",
+      "target": "src/01-Rust-Basics/01_variables_and_mutability.rs",
+      "sha256": "ca128989c4828d6e1c16bba7d16ee735700d79d8e8f1638261de8950bc4cc58b",
+      "bytes": 479,
+      "old_bin": "lec3_variables",
+      "bin": "basics_variables",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/02_constants_and_static.rs",
+      "target": "src/01-Rust-Basics/02_constants_and_static.rs",
+      "sha256": "ecdcbb38ca6c8b38c09e0c852c6f0a1b9f989e8eb8ced9271c993d25a315d669",
+      "bytes": 867,
+      "old_bin": "lec3_constants_static",
+      "bin": "basics_constants_static",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/03_scope_and_shadowing.rs",
+      "target": "src/01-Rust-Basics/03_scope_and_shadowing.rs",
+      "sha256": "80465ce024973485f9df7afffa5c9bc5853644158430ee42721012cd56430147",
+      "bytes": 1257,
+      "old_bin": "lec3_scope_shadowing",
+      "bin": "basics_scope_shadowing",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/04_input_parsing.rs",
+      "target": "src/01-Rust-Basics/04_input_parsing.rs",
+      "sha256": "466ad074166a1d59d35b0f43a92f475fdd8aec8a55a2c376c78f309f6aa675a8",
+      "bytes": 570,
+      "old_bin": "lec3_input_parsing",
+      "bin": "basics_input_parsing",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/05_type_inference.rs",
+      "target": "src/01-Rust-Basics/05_type_inference.rs",
+      "sha256": "a729aab99355fd3d5a5f79ed6050e851358b1df41cc9ab2db88f83872f87f7ed",
+      "bytes": 1644,
+      "old_bin": "lec3_type_inference",
+      "bin": "basics_type_inference",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/06_integer_types.rs",
+      "target": "src/01-Rust-Basics/06_integer_types.rs",
+      "sha256": "a7646c570d36e35d7b4bf29f1abe254b60fd4ccffa343ca7c97500d7d5bb7d75",
+      "bytes": 2123,
+      "old_bin": "lec3_integer_types",
+      "bin": "basics_integer_types",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/07_numeric_operations.rs",
+      "target": "src/01-Rust-Basics/07_numeric_operations.rs",
+      "sha256": "758c1aef56430109643d97f5a23e232fa03ee48ffa15966b793b26f4c45d8b26",
+      "bytes": 2321,
+      "old_bin": "lec3_numeric_operations",
+      "bin": "basics_numeric_operations",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/08_type_conversions.rs",
+      "target": "src/01-Rust-Basics/08_type_conversions.rs",
+      "sha256": "87b24801aabd81ff2a57de442e3fcbefd95a7a4e6825fb15616cde8e0ad2686b",
+      "bytes": 1922,
+      "old_bin": "lec3_type_conversions",
+      "bin": "basics_type_conversions",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/09_booleans.rs",
+      "target": "src/01-Rust-Basics/09_booleans.rs",
+      "sha256": "fbf78b3d4cfa4e2e4bfc5f33c26a4d8d1b1a0312da11fa6bd01bd58b687474aa",
+      "bytes": 1947,
+      "old_bin": "lec3_booleans",
+      "bin": "basics_booleans",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/10_characters.rs",
+      "target": "src/01-Rust-Basics/10_characters.rs",
+      "sha256": "9437ff5f3d85aef8b0aa0572390d9f7280367a15a613c2a8ce71b133210d5e15",
+      "bytes": 2341,
+      "old_bin": "lec3_characters",
+      "bin": "basics_characters",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/11_tuples.rs",
+      "target": "src/01-Rust-Basics/11_tuples.rs",
+      "sha256": "9a02eda9aa8dff5cc83299c7236306e414f17659f371503a3b6c75220a9e59a3",
+      "bytes": 2695,
+      "old_bin": "lec3_tuples",
+      "bin": "basics_tuples",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/12_arrays.rs",
+      "target": "src/01-Rust-Basics/12_arrays.rs",
+      "sha256": "a7dcd11979958a89dcdc6cdf5dd756ded6cbaa3807d3be565b96c094b23f24d7",
+      "bytes": 2440,
+      "old_bin": "lec3_arrays",
+      "bin": "basics_arrays",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/13_functions.rs",
+      "target": "src/02-Functions-Control-Flow/01_functions.rs",
+      "sha256": "a40b1679f052d77b3a7cbb7e5d1cd46c538e1f17b006d30e6ce66728672090b6",
+      "bytes": 2728,
+      "old_bin": "lec3_functions",
+      "bin": "flow_functions",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/14_if_expressions.rs",
+      "target": "src/02-Functions-Control-Flow/02_if_expressions.rs",
+      "sha256": "5a57e71c42bdff2023b54ffcdd7d84fbbca9661abb7d8af892bd5dfc419855a6",
+      "bytes": 3345,
+      "old_bin": "lec3_if_expressions",
+      "bin": "flow_if_expressions",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/15_loop_expressions.rs",
+      "target": "src/02-Functions-Control-Flow/03_loop_expressions.rs",
+      "sha256": "8f1d20060f34228eed7d2e218940eaeda176cec035741be5bd41d07df19ca69a",
+      "bytes": 910,
+      "old_bin": "lec3_loop_expressions",
+      "bin": "flow_loop_expressions",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/16_while_loops.rs",
+      "target": "src/02-Functions-Control-Flow/04_while_loops.rs",
+      "sha256": "6032274de3756f9d43313c39e1c39c36990bde7a6e3301e20dae4f306f7bc9e1",
+      "bytes": 744,
+      "old_bin": "lec3_while_loops",
+      "bin": "flow_while_loops",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec3/17_for_loops.rs",
+      "target": "src/02-Functions-Control-Flow/05_for_loops.rs",
+      "sha256": "b02a4456b511a623efb1b2c90307c26dede5d22829e76f448034e1803487e968",
+      "bytes": 1744,
+      "old_bin": "lec3_for_loops",
+      "bin": "flow_for_loops",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/01_string_and_scope.rs",
+      "target": "src/03-Ownership-Borrowing/01_string_and_scope.rs",
+      "sha256": "9cc7603df1fb885921645042e92d8b1e75828356bcee91aaaf949414faec4f36",
+      "bytes": 483,
+      "old_bin": "lec4_string_and_scope",
+      "bin": "ownership_string_and_scope",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/02_move_and_clone.rs",
+      "target": "src/03-Ownership-Borrowing/02_move_and_clone.rs",
+      "sha256": "12c46576aa6fa732c33a28c81d21a18ae90c4992ea9fff2f8d49a19349b8e768",
+      "bytes": 1157,
+      "old_bin": "lec4_move_and_clone",
+      "bin": "ownership_move_and_clone",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/03_copy_and_compound_values.rs",
+      "target": "src/03-Ownership-Borrowing/03_copy_and_compound_values.rs",
+      "sha256": "88f6d836cf164399bded7e4e79c1270b00010b9d7b7bf91f3c0bdbd55a8055da",
+      "bytes": 76,
+      "old_bin": "lec4_copy_and_compound_values",
+      "bin": "ownership_copy_and_compound_values",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/04_function_ownership.rs",
+      "target": "src/03-Ownership-Borrowing/04_function_ownership.rs",
+      "sha256": "f08513a7980e064518d9e16e94ebf4c7d99856535352c0025ebeb737d31367e1",
+      "bytes": 1076,
+      "old_bin": "lec4_function_ownership",
+      "bin": "ownership_function_ownership",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/05_shared_references.rs",
+      "target": "src/03-Ownership-Borrowing/05_shared_references.rs",
+      "sha256": "ebb306cd6f31a3bf85299c6df9537a519fbd7c8d4e89a02a8a54731339f0ebfc",
+      "bytes": 1060,
+      "old_bin": "lec4_shared_references",
+      "bin": "ownership_shared_references",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/06_mutable_references.rs",
+      "target": "src/03-Ownership-Borrowing/06_mutable_references.rs",
+      "sha256": "ce8f0a5546f74903b52adb11a06266114e88fb1fb5e4f17e16a36cd6a444ffbc",
+      "bytes": 492,
+      "old_bin": "lec4_mutable_references",
+      "bin": "ownership_mutable_references",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/07_borrowing_rules.rs",
+      "target": "src/03-Ownership-Borrowing/07_borrowing_rules.rs",
+      "sha256": "58e2fb691eb35d9d8ce38103de30781967cbb7776c188428264f89ced3ad989d",
+      "bytes": 1142,
+      "old_bin": "lec4_borrowing_rules",
+      "bin": "ownership_borrowing_rules",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/08_first_word_index.rs",
+      "target": "src/04-Strings-Slices/01_first_word_index.rs",
+      "sha256": "22016fa7340403b7a8110e9279e41b4f060a336c8b1f3ad9fe3a235c154525c0",
+      "bytes": 374,
+      "old_bin": "lec4_first_word_index",
+      "bin": "strings_first_word_index",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/09_string_slices.rs",
+      "target": "src/04-Strings-Slices/02_string_slices.rs",
+      "sha256": "cf6e3ac6c0f5342de018542ddc2db4ef9166f5def3b8caea999ee528d9dc8713",
+      "bytes": 606,
+      "old_bin": "lec4_string_slices",
+      "bin": "strings_string_slices",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/10_str_parameters.rs",
+      "target": "src/04-Strings-Slices/03_str_parameters.rs",
+      "sha256": "5f772fc9534e9a6cd1d04d6f59875fbf0318ee7e4cf59a77f40ca775406a7406",
+      "bytes": 89,
+      "old_bin": "lec4_str_parameters",
+      "bin": "strings_str_parameters",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/11_array_slices.rs",
+      "target": "src/04-Strings-Slices/04_array_slices.rs",
+      "sha256": "52a942e3ad405af5b71aad5b2ab8d46f59215e4994234a741f7326f68cc131ae",
+      "bytes": 727,
+      "old_bin": "lec4_array_slices",
+      "bin": "strings_array_slices",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/12_string_operations.rs",
+      "target": "src/04-Strings-Slices/05_string_operations.rs",
+      "sha256": "f3cde10e55130d4c9c328c212a08b74df5966cffad976597e8193d0a0d8604b9",
+      "bytes": 322,
+      "old_bin": "lec4_string_operations",
+      "bin": "strings_string_operations",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec4/13_utf8_and_indexing.rs",
+      "target": "src/04-Strings-Slices/06_utf8_and_indexing.rs",
+      "sha256": "6dbc7d9c51e538d96fff5acf3e642056b2cf081fc747113992cc84abd2d98a7e",
+      "bytes": 250,
+      "old_bin": "lec4_utf8_and_indexing",
+      "bin": "strings_utf8_and_indexing",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/01_structs_and_fields.rs",
+      "target": "src/05-Structs-Methods/01_structs_and_fields.rs",
+      "sha256": "f2f285da69a1b883c399746f0c31dfd13f763cea048ebf5439268c7deb48ae6b",
+      "bytes": 102,
+      "old_bin": "lec5_structs_and_fields",
+      "bin": "structs_fields",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/02_builders_and_shorthand.rs",
+      "target": "src/05-Structs-Methods/02_builders_and_shorthand.rs",
+      "sha256": "9806bd7fe496a6d7a9dc71411e4640d254aa27aa8e9c894958aecaf409c3b2c2",
+      "bytes": 92,
+      "old_bin": "lec5_builders_and_shorthand",
+      "bin": "structs_builders",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/03_struct_update.rs",
+      "target": "src/05-Structs-Methods/03_struct_update.rs",
+      "sha256": "722274212e4e8502cd7fb23728ac118d2b78d7b6187c5184cfe2699ce83fc0c5",
+      "bytes": 96,
+      "old_bin": "lec5_struct_update",
+      "bin": "structs_update",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/04_tuple_and_unit_structs.rs",
+      "target": "src/05-Structs-Methods/04_tuple_and_unit_structs.rs",
+      "sha256": "ceebc950c10b9c7bec802544327d1b2ef486eaa3b18e023d4bf60efe678e573c",
+      "bytes": 103,
+      "old_bin": "lec5_tuple_and_unit_structs",
+      "bin": "structs_tuple_unit",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/05_struct_debug.rs",
+      "target": "src/05-Structs-Methods/05_struct_debug.rs",
+      "sha256": "e3b9a8bd0b419ef77dae21971394d0298c30704c13def969c83178be2538d003",
+      "bytes": 1518,
+      "old_bin": "lec5_struct_debug",
+      "bin": "structs_debug",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/06_methods.rs",
+      "target": "src/05-Structs-Methods/06_methods.rs",
+      "sha256": "3bcf024cc4e0265de1926fae8c3bf9d8a51ea4044e6828826525d1b733bcd6ce",
+      "bytes": 2514,
+      "old_bin": "lec5_methods",
+      "bin": "structs_methods",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/07_associated_functions.rs",
+      "target": "src/05-Structs-Methods/07_associated_functions.rs",
+      "sha256": "c0b503fab9b9478d9bace96447eea702ef3353ef86e43d92186bc6e69a188662",
+      "bytes": 1224,
+      "old_bin": "lec5_associated_functions",
+      "bin": "structs_associated_functions",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/08_enums.rs",
+      "target": "src/06-Enums-Pattern-Matching/01_enums.rs",
+      "sha256": "94e723172198c012b5a17451f968d2aeabf367068ddeee9a8eba2ad6414ec52e",
+      "bytes": 3602,
+      "old_bin": "lec5_enums",
+      "bin": "enums_values",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/09_option.rs",
+      "target": "src/06-Enums-Pattern-Matching/02_option.rs",
+      "sha256": "e57ce67e66de3380aec6bc696f381075ef9ea7578ecd9bf6406a6b7087261fc6",
+      "bytes": 1737,
+      "old_bin": "lec5_option",
+      "bin": "enums_option",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/10_match_patterns.rs",
+      "target": "src/06-Enums-Pattern-Matching/03_match_patterns.rs",
+      "sha256": "4abd7a02d0fbb23e38fb107023a9e058bd16ab4399d18d28f0a2717033d21ed6",
+      "bytes": 3415,
+      "old_bin": "lec5_match_patterns",
+      "bin": "enums_match",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/11_if_let.rs",
+      "target": "src/06-Enums-Pattern-Matching/04_if_let.rs",
+      "sha256": "3bf6b90f21cd503621d560b9ab330df62746985188dd7eba7f084d0897712f35",
+      "bytes": 1922,
+      "old_bin": "lec5_if_let",
+      "bin": "enums_if_let",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/12_enum_modeling.rs",
+      "target": "src/06-Enums-Pattern-Matching/05_enum_modeling.rs",
+      "sha256": "9959d5f3990f70805cdc7aaeb50d9c69711b86cdea860ae014aaad4caaa6521f",
+      "bytes": 2620,
+      "old_bin": "lec5_enum_modeling",
+      "bin": "enums_modeling",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/UT/Fall 2026/ECE 1724 - RUST/ece1724-rust-study",
+      "source": "src/lectures/lec5/13_oop.rs",
+      "target": "src/07-OOP-Design/01_oop.rs",
+      "sha256": "50a605669954bfb9b32fef1dd39da2c45603b76e1ef5fa12651df456ccda7f1a",
+      "bytes": 2257,
+      "old_bin": "lec5_oop",
+      "bin": "oop_characteristics",
+      "group": "original"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/01_structs.rs",
+      "target": "src/05-Structs-Methods/practice/01_structs.rs",
+      "sha256": "9a011ef6afc514b37b8b0e095dbbabd24ad632e3851f68e29f3e738c7198be48",
+      "bytes": 2355,
+      "old_bin": "structs",
+      "bin": "practice_structs",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/02_tuple_unit_debug.rs",
+      "target": "src/05-Structs-Methods/practice/02_tuple_unit_debug.rs",
+      "sha256": "258a436753df3110be7ed5a8aee3871f2d663b84bcd34a5fcdfa0a29d88c8e78",
+      "bytes": 1980,
+      "old_bin": "tuple_unit_debug",
+      "bin": "practice_tuple_unit_debug",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/03_methods.rs",
+      "target": "src/05-Structs-Methods/practice/03_methods.rs",
+      "sha256": "8b8117dc4bd9955d53bc0cb58805fb35b7decedccf25687a474fe2b1afbc70e4",
+      "bytes": 2067,
+      "old_bin": "methods",
+      "bin": "practice_methods",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/04_enums_option.rs",
+      "target": "src/06-Enums-Pattern-Matching/practice/04_enums_option.rs",
+      "sha256": "aa387bbddbd601e107642f3d734b28a3f6311e74bace52d570c0372dfad5c08a",
+      "bytes": 1929,
+      "old_bin": "enums_option",
+      "bin": "practice_enums_option",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/05_match.rs",
+      "target": "src/06-Enums-Pattern-Matching/practice/05_match.rs",
+      "sha256": "6fafe2f04cb387e9df3af0da204fa710bac2362f7c64c679953ee1115518891d",
+      "bytes": 1783,
+      "old_bin": "match",
+      "bin": "practice_match",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/06_if_let.rs",
+      "target": "src/06-Enums-Pattern-Matching/practice/06_if_let.rs",
+      "sha256": "db4612dce01b5cc23b16fd1d3cc26f520f4feec290107bb3865dcfa999630b8a",
+      "bytes": 2032,
+      "old_bin": "if_let",
+      "bin": "practice_if_let",
+      "group": "guided-practice"
+    },
+    {
+      "source_root": "/Users/xiangpengji/Documents/Obsidian/Rust_Tutorial/practice/structs-enums",
+      "source": "src/bin/07_modeling_oop.rs",
+      "target": "src/07-OOP-Design/practice/07_modeling_oop.rs",
+      "sha256": "9b433b0a863da541ab8a43fe8b0f81ce9e3edc2de33465dff901f0353b0eeceb",
+      "bytes": 2658,
+      "old_bin": "modeling_oop",
+      "bin": "practice_modeling_oop",
+      "group": "guided-practice"
+    }
+  ]
+}

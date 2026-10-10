@@ -7,5 +7,8 @@ fn main() {
 
     let guess: i32 = guess.trim().parse().expect("Failed to parse as u64");
 
+    let mut text = String::from("hello");
+    text.push('!');
+    text.push_str("!");
     println!("{}", guess);
 }

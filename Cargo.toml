@@ -1,145 +1,215 @@
 [package]
-name = "ece1724-rust-study"
+name = "rustlab"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.98.1"
 publish = false
+autobins = false
+default-run = "practice_structs"
 
 [dependencies]
 log = "0.4.34"
 
 [[bin]]
-name = "lec3_variables"
-path = "src/lectures/lec3/01_variables_and_mutability.rs"
+name = "scratch"
+path = "src/main.rs"
 
 [[bin]]
-name = "lec3_constants_static"
-path = "src/lectures/lec3/02_constants_and_static.rs"
+name = "basics_variables"
+path = "src/01-Rust-Basics/01_variables_and_mutability.rs"
 
 [[bin]]
-name = "lec3_scope_shadowing"
-path = "src/lectures/lec3/03_scope_and_shadowing.rs"
+name = "basics_constants_static"
+path = "src/01-Rust-Basics/02_constants_and_static.rs"
 
 [[bin]]
-name = "lec3_input_parsing"
-path = "src/lectures/lec3/04_input_parsing.rs"
+name = "basics_scope_shadowing"
+path = "src/01-Rust-Basics/03_scope_and_shadowing.rs"
 
 [[bin]]
-name = "lec3_type_inference"
-path = "src/lectures/lec3/05_type_inference.rs"
+name = "basics_input_parsing"
+path = "src/01-Rust-Basics/04_input_parsing.rs"
 
 [[bin]]
-name = "lec3_integer_types"
-path = "src/lectures/lec3/06_integer_types.rs"
+name = "basics_type_inference"
+path = "src/01-Rust-Basics/05_type_inference.rs"
 
 [[bin]]
-name = "lec3_numeric_operations"
-path = "src/lectures/lec3/07_numeric_operations.rs"
+name = "basics_integer_types"
+path = "src/01-Rust-Basics/06_integer_types.rs"
 
 [[bin]]
-name = "lec3_type_conversions"
-path = "src/lectures/lec3/08_type_conversions.rs"
+name = "basics_numeric_operations"
+path = "src/01-Rust-Basics/07_numeric_operations.rs"
 
 [[bin]]
-name = "lec3_booleans"
-path = "src/lectures/lec3/09_booleans.rs"
+name = "basics_type_conversions"
+path = "src/01-Rust-Basics/08_type_conversions.rs"
 
 [[bin]]
-name = "lec3_characters"
-path = "src/lectures/lec3/10_characters.rs"
+name = "basics_booleans"
+path = "src/01-Rust-Basics/09_booleans.rs"
 
 [[bin]]
-name = "lec3_tuples"
-path = "src/lectures/lec3/11_tuples.rs"
+name = "basics_characters"
+path = "src/01-Rust-Basics/10_characters.rs"
 
 [[bin]]
-name = "lec3_arrays"
-path = "src/lectures/lec3/12_arrays.rs"
+name = "basics_tuples"
+path = "src/01-Rust-Basics/11_tuples.rs"
 
 [[bin]]
-name = "lec3_functions"
-path = "src/lectures/lec3/13_functions.rs"
+name = "basics_arrays"
+path = "src/01-Rust-Basics/12_arrays.rs"
 
 [[bin]]
-name = "lec3_if_expressions"
-path = "src/lectures/lec3/14_if_expressions.rs"
+name = "flow_functions"
+path = "src/02-Functions-Control-Flow/01_functions.rs"
 
 [[bin]]
-name = "lec3_loop_expressions"
-path = "src/lectures/lec3/15_loop_expressions.rs"
+name = "flow_if_expressions"
+path = "src/02-Functions-Control-Flow/02_if_expressions.rs"
 
 [[bin]]
-name = "lec3_while_loops"
-path = "src/lectures/lec3/16_while_loops.rs"
+name = "flow_loop_expressions"
+path = "src/02-Functions-Control-Flow/03_loop_expressions.rs"
 
 [[bin]]
-name = "lec3_for_loops"
-path = "src/lectures/lec3/17_for_loops.rs"
+name = "flow_while_loops"
+path = "src/02-Functions-Control-Flow/04_while_loops.rs"
 
 [[bin]]
-name = "lec4_string_and_scope"
-path = "src/lectures/lec4/01_string_and_scope.rs"
+name = "flow_for_loops"
+path = "src/02-Functions-Control-Flow/05_for_loops.rs"
 
 [[bin]]
-name = "lec4_move_and_clone"
-path = "src/lectures/lec4/02_move_and_clone.rs"
+name = "ownership_string_and_scope"
+path = "src/03-Ownership-Borrowing/01_string_and_scope.rs"
 
 [[bin]]
-name = "lec4_copy_and_compound_values"
-path = "src/lectures/lec4/03_copy_and_compound_values.rs"
+name = "ownership_move_and_clone"
+path = "src/03-Ownership-Borrowing/02_move_and_clone.rs"
 
 [[bin]]
-name = "lec4_function_ownership"
-path = "src/lectures/lec4/04_function_ownership.rs"
+name = "ownership_copy_and_compound_values"
+path = "src/03-Ownership-Borrowing/03_copy_and_compound_values.rs"
 
 [[bin]]
-name = "lec4_shared_references"
-path = "src/lectures/lec4/05_shared_references.rs"
+name = "ownership_function_ownership"
+path = "src/03-Ownership-Borrowing/04_function_ownership.rs"
 
 [[bin]]
-name = "lec4_mutable_references"
-path = "src/lectures/lec4/06_mutable_references.rs"
+name = "ownership_shared_references"
+path = "src/03-Ownership-Borrowing/05_shared_references.rs"
 
 [[bin]]
-name = "lec4_borrowing_rules"
-path = "src/lectures/lec4/07_borrowing_rules.rs"
+name = "ownership_mutable_references"
+path = "src/03-Ownership-Borrowing/06_mutable_references.rs"
 
 [[bin]]
-name = "lec4_first_word_index"
-path = "src/lectures/lec4/08_first_word_index.rs"
+name = "ownership_borrowing_rules"
+path = "src/03-Ownership-Borrowing/07_borrowing_rules.rs"
 
 [[bin]]
-name = "lec4_string_slices"
-path = "src/lectures/lec4/09_string_slices.rs"
+name = "strings_first_word_index"
+path = "src/04-Strings-Slices/01_first_word_index.rs"
 
 [[bin]]
-name = "lec4_str_parameters"
-path = "src/lectures/lec4/10_str_parameters.rs"
+name = "strings_string_slices"
+path = "src/04-Strings-Slices/02_string_slices.rs"
 
 [[bin]]
-name = "lec4_array_slices"
-path = "src/lectures/lec4/11_array_slices.rs"
+name = "strings_str_parameters"
+path = "src/04-Strings-Slices/03_str_parameters.rs"
 
 [[bin]]
-name = "lec4_string_operations"
-path = "src/lectures/lec4/12_string_operations.rs"
+name = "strings_array_slices"
+path = "src/04-Strings-Slices/04_array_slices.rs"
 
 [[bin]]
-name = "lec4_utf8_and_indexing"
-path = "src/lectures/lec4/13_utf8_and_indexing.rs"
+name = "strings_string_operations"
+path = "src/04-Strings-Slices/05_string_operations.rs"
 
 [[bin]]
-name = "lec5_structs_and_fields"
-path = "src/lectures/lec5/01_structs_and_fields.rs"
+name = "strings_utf8_and_indexing"
+path = "src/04-Strings-Slices/06_utf8_and_indexing.rs"
 
 [[bin]]
-name = "lec5_builders_and_shorthand"
-path = "src/lectures/lec5/02_builders_and_shorthand.rs"
+name = "structs_fields"
+path = "src/05-Structs-Methods/01_structs_and_fields.rs"
 
 [[bin]]
-name = "lec5_struct_update"
-path = "src/lectures/lec5/03_struct_update.rs"
+name = "structs_builders"
+path = "src/05-Structs-Methods/02_builders_and_shorthand.rs"
 
 [[bin]]
-name = "lec5_tuple_and_unit_structs"
-path = "src/lectures/lec5/04_tuple_and_unit_structs.rs"
+name = "structs_update"
+path = "src/05-Structs-Methods/03_struct_update.rs"
+
+[[bin]]
+name = "structs_tuple_unit"
+path = "src/05-Structs-Methods/04_tuple_and_unit_structs.rs"
+
+[[bin]]
+name = "structs_debug"
+path = "src/05-Structs-Methods/05_struct_debug.rs"
+
+[[bin]]
+name = "structs_methods"
+path = "src/05-Structs-Methods/06_methods.rs"
+
+[[bin]]
+name = "structs_associated_functions"
+path = "src/05-Structs-Methods/07_associated_functions.rs"
+
+[[bin]]
+name = "enums_values"
+path = "src/06-Enums-Pattern-Matching/01_enums.rs"
+
+[[bin]]
+name = "enums_option"
+path = "src/06-Enums-Pattern-Matching/02_option.rs"
+
+[[bin]]
+name = "enums_match"
+path = "src/06-Enums-Pattern-Matching/03_match_patterns.rs"
+
+[[bin]]
+name = "enums_if_let"
+path = "src/06-Enums-Pattern-Matching/04_if_let.rs"
+
+[[bin]]
+name = "enums_modeling"
+path = "src/06-Enums-Pattern-Matching/05_enum_modeling.rs"
+
+[[bin]]
+name = "oop_characteristics"
+path = "src/07-OOP-Design/01_oop.rs"
+
+[[bin]]
+name = "practice_structs"
+path = "src/05-Structs-Methods/practice/01_structs.rs"
+
+[[bin]]
+name = "practice_tuple_unit_debug"
+path = "src/05-Structs-Methods/practice/02_tuple_unit_debug.rs"
+
+[[bin]]
+name = "practice_methods"
+path = "src/05-Structs-Methods/practice/03_methods.rs"
+
+[[bin]]
+name = "practice_enums_option"
+path = "src/06-Enums-Pattern-Matching/practice/04_enums_option.rs"
+
+[[bin]]
+name = "practice_match"
+path = "src/06-Enums-Pattern-Matching/practice/05_match.rs"
+
+[[bin]]
+name = "practice_if_let"
+path = "src/06-Enums-Pattern-Matching/practice/06_if_let.rs"
+
+[[bin]]
+name = "practice_modeling_oop"
+path = "src/07-OOP-Design/practice/07_modeling_oop.rs"
