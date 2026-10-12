@@ -1,6 +1,7 @@
 fn main() {
     // Practice 11: Shared and mutable array slices.
     test();
+    demo();
 }
 fn total(values: &[i32]) -> i32 {
     let mut sum = 0;
@@ -16,6 +17,7 @@ fn demo() {
 
     p[0] += 5;
     p[1] = 0;
+    println!("{:?}", p);
 
     println!("{:?}", arr);
 }
@@ -23,8 +25,9 @@ fn demo() {
 fn test() {
     let mut values = [10, 20, 30, 40];
     let snapshot = values;
+    let length = values.len();
 
-    let part = &mut values[1..3];
+    let part = &mut values[1..length];
 
     part[0] += 5;
     // println!("{values:?}");

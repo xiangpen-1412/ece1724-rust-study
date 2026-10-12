@@ -36,12 +36,45 @@ Add a unit variant Reset without updating apply and observe the compiler.
 Then implement Reset so it produces Some(0).
 */
 
-// TODO: Define the required types and functions yourself.
+#[derive(Debug)]
+enum Command {
+    Keep,
+    Add(i32),
+    Replace(Option<i32>),
+}
+
+fn apply(current: Option<i32>, command: Command) -> Option<i32> {
+    match command {
+        Command::Keep => { current }
+        Command::Add(value) => { Some(value + current.unwrap_or(0)) }
+        Command::Replace(value) => { value }
+    }
+}
 
 fn main() {
-    // Question 1: Record predictions, then write and verify your code.
-    // TODO: Add your work here.
+    // Question 1: Predict before uncommenting and running this snippet.
+    let y = 10;
+    let x = Some(5);
+    let result = match x {
+        Some(y) => y + 1,
+        None => y,
+    };
+    println!("{result} {y} {x:?}");
 
-    // Question 2: Record predictions and explain your implementation.
-    // TODO: Add your work here.
+    // Question 2: Uncomment after implementing apply.
+    run_cases();
+}
+
+fn run_cases() {
+    let cases = [
+        (Some(0), Command::Add(3)),
+        (None, Command::Add(3)),
+        (Some(7), Command::Replace(None)),
+        (None, Command::Keep),
+    ];
+    for (current, command) in cases {
+        println!("Input: {current:?}, {command:?}");
+        let result = apply(current, command);
+        println!("Result: {result:?}");
+    }
 }

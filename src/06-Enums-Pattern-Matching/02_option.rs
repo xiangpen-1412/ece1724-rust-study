@@ -13,6 +13,7 @@ fn main() {
     println!("number = {some_number:?}, char = {some_char:?}");
 
     // None contains no value from which to infer T.
+    // note: must have type when defining None
     let mut absent_number: Option<i32> = None;
     println!("absent number = {absent_number:?}");
     // let unknown = None; // Error without other context that determines T.

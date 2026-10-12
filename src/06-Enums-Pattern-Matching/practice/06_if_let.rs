@@ -48,12 +48,46 @@ If Event gains a new variant, will an if let handling only Paste force you
 to add logic like an explicitly exhaustive match? When might behavior be missed?
 */
 
-// TODO: Define the required types and functions yourself.
+fn show_label_if_let(label: &Option<String>) {
+    // TODO: Print the text for Some, including an empty String.
+    // Print "<missing>" for None. Use if let ... else.
+    if let Some(label) = label {
+        println!("Label: {}", label);
+    }
+
+}
+
+fn show_label_match(label: &Option<String>) {
+    // TODO: Implement the same behavior with match.
+    match label {
+        Some(value) => { println!("{}", value); },
+        _ => {}
+    }
+}
+
+fn show_label_let_else(label: &Option<String>) {
+    // TODO: Complete after the let ... else supplement.
+    todo!("Write the early-return version")
+}
 
 fn main() {
-    // Question 1: Record predictions, then write and verify your code.
-    // TODO: Add your work here.
+    // Uncomment after implementing show_label_if_let.
+    // run_cases();
+}
 
-    // Question 2: Record predictions and explain your implementation.
-    // TODO: Add your work here.
+fn run_cases() {
+    let labels = [
+        Some(String::from("")),
+        Some(String::from("Rust")),
+        None,
+    ];
+
+    for label in &labels {
+        println!("Input: {label:?}");
+        show_label_if_let(label);
+        // Uncomment each additional version after implementing it.
+        show_label_match(label);
+        show_label_let_else(label);
+        println!("Still available: {label:?}");
+    }
 }

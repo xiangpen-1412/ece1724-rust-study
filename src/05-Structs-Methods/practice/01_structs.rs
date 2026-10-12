@@ -52,11 +52,38 @@ Explain why '..u1 always moves the entire u1' is an inaccurate rule.
 */
 
 // TODO: Define the required types and functions yourself.
+#[derive(Debug)]
+struct User {
+    username: String,
+    email: String,
+    active: bool,
+    visits: u32
+}
+
+fn build_user(username: String, email: String) -> User {
+    return User {
+        username: username,
+        email,
+        active: true,
+        visits: 20
+    }
+}
 
 fn main() {
     // Question 1: Record predictions, then write and verify your code.
     // TODO: Add your work here.
 
+    let mut user: User = User {
+        username: String::from("xiangpen"),
+        email: "xiangpen@outlook.com".to_string(),
+        active: true,
+        visits: 0
+    };
+
+    user.visits += 1;
+    user.email = String::from("suai");
+
+    println!("{:#?}", user);
     // Question 2: Record predictions and explain your implementation.
     // TODO: Add your work here.
 }

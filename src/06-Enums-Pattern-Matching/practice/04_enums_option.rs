@@ -41,12 +41,74 @@ Do not use unwrap or expect. Explain the error in total; its full repair
 will use match in the next lesson.
 */
 
-// TODO: Define the required types and functions yourself.
+// TODO: Define Message and its variants here.
+// Add Debug support and write an inspect method that borrows the message.
+#[derive(Debug)]
+enum Message {
+    Quit,
+    Move {x: i32, y: i32},
+    Write(String),
+    Color(u8, u8, u8)
+}
+
+impl Message {
+    fn inspect(&self) {
+        println!("{:#?}", self);
+    }
+}
 
 fn main() {
-    // Question 1: Record predictions, then write and verify your code.
-    // TODO: Add your work here.
+    // Uncomment this block after defining Message and inspect.
+    let quit = Message::Quit;
+    let movement = Message::Move { x: 3, y: 4 };
+    let text = String::from("hello");
+    let message = Message::Write(text);
+    let color = Message::Color(10, 20, 30);
+    println!("Quit: {quit:?}");
+    println!("Movement: {movement:?}");
+    println!("Color: {color:?}");
+    message.inspect();
+    message.inspect();
+    println!("Still available: {message:?}");
+    let messages = [quit, movement, message, color];
+    println!("Message sequence: {messages:#?}");
 
-    // Question 2: Record predictions and explain your implementation.
-    // TODO: Add your work here.
+    // Complete the two Option expressions below, then uncomment this call.
+    option_practice();
+
+    // note: type annotations needed for `Option<_>`
+    let mut num = None;
+
+    // note: or declare the type here
+    num = Some(5);
+
+    let x = match num {
+        None => None,
+        Some(value) => Some(value + 10)
+    };
+
+    println!("x = {x:?}");
+}
+
+#[derive(Debug)]
+struct Reading {
+    sensor: String,
+    temperature: Option<u8>,
+    online: bool,
+}
+
+fn option_practice() {
+    let measured = Reading {
+        sensor: String::from("Sensor A"),
+        temperature: Some(0),
+        online: true,
+    };
+
+    let missing = Reading {
+        sensor: String::from("Sensor B"),
+        temperature: None,
+        online: true,
+    };
+    println!("Measured: {measured:#?}");
+    println!("Missing: {missing:#?}");
 }

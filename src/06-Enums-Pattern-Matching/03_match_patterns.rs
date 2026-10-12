@@ -35,8 +35,11 @@ enum Coin {
     Quarter(UsState),
 }
 
+// note: in match, you have to consider all possible scenarios
 fn value_in_cents(coin: Coin) -> u8 {
     match coin {
+        // note: other will match everything,
+        // other => 10,
         Coin::Penny => 1,
         Coin::Nickel => 5,
         Coin::Dime => 10,
@@ -89,7 +92,7 @@ fn main() {
     for coin in [Coin::Quarter(UsState::Alaska), Coin::Nickel] {
         match coin {
             Coin::Quarter(state) => println!("Quarter from {state:?}"),
-            other_coin => println!("Other coin: {other_coin:?}"),
+            other => println!("Other coin: {other:?}"),
         }
     }
 
@@ -115,6 +118,15 @@ fn main() {
         }
     }
     // An arm returning 25 and another returning () would be a type error.
+
+    let string = String::from("apple");
+
+    match string.as_str() {
+        "apple" => println!(),
+        "banana" => println!("string: banana"),
+        "orange" => println!("string: orange"),
+        _ => println!("string: {string:?}")
+    };
 }
 
 // Expand (leave for practice):
