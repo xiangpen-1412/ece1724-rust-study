@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="errors_panic_or_result" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+    <option name="command" value="run --package rustlab --bin errors_panic_or_result" />
+    <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+    <option name="channel" value="DEFAULT" />
+    <option name="backtrace" value="SHORT" />
+    <method v="2">
+      <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+    </method>
+  </configuration>
+</component>

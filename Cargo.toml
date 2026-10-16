@@ -5,7 +5,7 @@ edition = "2024"
 rust-version = "1.98.1"
 publish = false
 autobins = false
-default-run = "practice_structs"
+default-run = "collections_vectors"
 
 [dependencies]
 log = "0.4.34"
@@ -213,3 +213,71 @@ path = "src/06-Enums-Pattern-Matching/practice/06_if_let.rs"
 [[bin]]
 name = "practice_modeling_oop"
 path = "src/07-OOP-Design/practice/07_modeling_oop.rs"
+
+[[bin]]
+name = "errors_panic"
+path = "src/08-Error-Handling/01_panic.rs"
+
+[[bin]]
+name = "errors_result"
+path = "src/08-Error-Handling/02_result.rs"
+
+[[bin]]
+name = "errors_match"
+path = "src/08-Error-Handling/03_match_errors.rs"
+
+[[bin]]
+name = "errors_unwrap_expect"
+path = "src/08-Error-Handling/04_unwrap_expect.rs"
+
+[[bin]]
+name = "errors_propagation"
+path = "src/08-Error-Handling/05_error_propagation.rs"
+
+[[bin]]
+name = "errors_question_mark"
+path = "src/08-Error-Handling/06_question_mark.rs"
+
+[[bin]]
+name = "errors_panic_or_result"
+path = "src/08-Error-Handling/07_panic_or_result.rs"
+
+[[bin]]
+name = "collections_vectors"
+path = "src/09-Vectors-HashMaps/01_vectors.rs"
+
+[[bin]]
+name = "collections_vector_updates"
+path = "src/09-Vectors-HashMaps/02_vector_updates.rs"
+
+[[bin]]
+name = "collections_vector_access"
+path = "src/09-Vectors-HashMaps/03_vector_access.rs"
+
+[[bin]]
+name = "collections_vector_borrowing"
+path = "src/09-Vectors-HashMaps/04_vector_borrowing.rs"
+
+[[bin]]
+name = "collections_vector_iteration"
+path = "src/09-Vectors-HashMaps/05_vector_iteration.rs"
+
+[[bin]]
+name = "collections_enum_elements"
+path = "src/09-Vectors-HashMaps/06_enum_elements.rs"
+
+[[bin]]
+name = "collections_hashmaps"
+path = "src/09-Vectors-HashMaps/07_hashmaps.rs"
+
+[[bin]]
+name = "collections_hashmap_ownership"
+path = "src/09-Vectors-HashMaps/08_hashmap_ownership.rs"
+
+[[bin]]
+name = "collections_hashmap_updates"
+path = "src/09-Vectors-HashMaps/09_hashmap_updates.rs"
+
+[[bin]]
+name = "collections_word_count"
+path = "src/09-Vectors-HashMaps/10_word_count.rs"

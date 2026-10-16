@@ -4,18 +4,18 @@
 
 ## 当前学习
 
-先打开 [Struct 手写练习](src/05-Structs-Methods/practice/01_structs.rs)，自己写 User 和 build_user。后续 methods、associated functions（常见命名如 new）、enums、Option、match 与 if let 都在对应模块继续。每组两题，按当前讲解推进。
-
-`new` 是关联函数的常见命名约定，不是 Rust 的特殊构造关键字。
-
-点击文件中 `fn main` 旁的运行按钮即可运行。也可以在项目根目录运行：
+[Lecture 7：Vectors and Hash Maps](src/09-Vectors-HashMaps/README.md) 的跟课框架已就绪。打开 `src/09-Vectors-HashMaps/01_vectors.rs` 开始写；每个文件都有独立入口，点击 `fn main()` 左侧运行按钮，或在运行配置中选择对应的 `collections_*`。
 
 ```bash
-cargo run --bin practice_structs
-cargo check --all-targets
+cargo run
+cargo run --bin collections_vector_access
+cargo run --bin collections_hashmaps
+cargo run --bin collections_word_count
 ```
 
-直接 `cargo run` 默认进入当前 Struct 练习。原来的 `src/main.rs` 内容也完整保留，运行目标为 `scratch`。
+直接 `cargo run` 默认进入 `collections_vectors`。本模块不需要额外依赖或外部数据文件。
+
+[Lecture 6：错误处理](src/08-Error-Handling/README.md) 仍通过 `errors_*` 入口运行，例如 `cargo run --bin errors_question_mark`。Struct 练习入口仍为 `practice_structs`，原 `src/main.rs` 入口仍为 `scratch`。
 
 ## 知识模块
 
@@ -26,6 +26,8 @@ cargo check --all-targets
 - [Struct、方法与关联函数](src/05-Structs-Methods/README.md)
 - [Enum、Option 与模式匹配](src/06-Enums-Pattern-Matching/README.md)
 - [OOP 与类型设计](src/07-OOP-Design/README.md)
+- [错误处理](src/08-Error-Handling/README.md)
+- [Vec 与 HashMap](src/09-Vectors-HashMaps/README.md)
 
 ## 原代码保全
 
