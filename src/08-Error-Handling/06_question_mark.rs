@@ -18,5 +18,7 @@ fn main() {
     println!("Sample path: {sample_path}");
     println!("Missing path: {missing_path}");
 
+    read_username_from_file_question_mark().expect("TODO: panic message");
+
     // Write your code here.
 }
