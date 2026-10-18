@@ -23,13 +23,42 @@ fn main() {
     // TODO 1: find the first multiple of 7 greater than 20 using loop and break value.
     let mut counter = 7;
 
-    // 这个counter不会进入scope，until returns
-    let counter = loop {
+    loop {
         if counter > 20 {
-            break counter;
+            break;
         }
         counter += 7;
-    };
+    }
 
     println!("{}", counter);
+
+    // let flag = true;
+    //
+    // let result = loop {
+    //     if flag {
+    //         break 10;
+    //     } else {
+    //         break "hello";
+    //     }
+    // };
+
+    'inner: loop {
+        break
+    }
+
+    'outer: loop {
+         for n in 1..3 {
+             if n == 2 {break 'outer;}
+         }
+    };
+
+    let mut n: i32 = 9;
+
+    loop {
+        n = 10;
+        println!("{}", n);
+        break;
+    }
+
+    println!("{}", n);
 }
